@@ -4,15 +4,16 @@
     <title>Hwan Kim</title>
     <meta charset='utf-8'>
     <style>
-      
-      .bodyhome { /* 웹페이지 전체를 중앙정렬 */
-        display : flex ; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
-        align-items : center ;  /* 세로축 정렬 */
+      /*
+      .bodyhome {  웹페이지 전체를 중앙정렬(그러면 이미지까지 정렬되니까 container만)
+        display : flex ; 
+        align-items : center ;   세로축 정렬 
         margin : 0 ;
-        justify-content: center; /* 가로축 정렬 */
-      }
+        justify-content: center;  가로축 정렬 
+      } */
+      
       .container { /* 로고와 메뉴 사이 가로 정렬 */
-        display: flex;
+        display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
         align-items: center;
         justify-content: center;
       }
@@ -25,6 +26,12 @@
       }
       h1 .logo-first {
         color : red ;
+      }
+      ul {
+        list-style : none ;
+        display : flex ;
+        align-items : center ;
+        justify-content : center ;
       }
       /* bodyhome은 중앙정렬, 주 로고와 메뉴는 그리드 설정, 사진은 박스모델로 아래에 */
     </style>
