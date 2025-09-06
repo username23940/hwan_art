@@ -21,6 +21,10 @@
         display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
         align-items: center;
         justify-content: center;
+        margin-top : 20px ; /* 위에서 조금 띄우기 */
+         /* gap : 20px로고와 메뉴 사이 간격 OR
+        gap: 2vw  OR */
+        gap : clamp(20px, 2vw, 100px)
       }
       .navbar {
         border : 1px solid transparent ;
