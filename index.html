@@ -20,7 +20,7 @@
       .container { /* 로고와 메뉴 사이 가로 정렬 */ 
         display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
         align-items: center;
-        justify-content: space-between ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분 */
+        justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분 */
         padding-left: 100px ;
         padding-right : 100px ; /* 너무 왼쪽끝 오른쪽 끝이라 패딩 부여 */
         margin-top : 20px ; /* 위에서 조금 띄우기 */
@@ -28,6 +28,15 @@
         gap: 2vw  OR (margin과 달리 아이템 사이에만 간격 주고, 바깥쪽에는 안줌 */
         gap : clamp(20px, 2vw, 100px)
       }
+        /*
+      background: #f4f4f4; 
+      position: fixed; /* 상단 고정 */ 
+      top: 0; left: 0; width: 100%; /* 화면 전체 너비 */ 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); } 
+      이 코드는 왜 필요한거야
+*/
+
+      
       .navbar {
         border : 1px solid transparent ;
       }
@@ -51,8 +60,7 @@
       img { /* container 선택자로 활용 가능하지만 이미지는 다른 속성이므로 분리 */
         display : block ;
         margin : 20px auto 0 ; /* 상단, 좌우, 하단 여백 순서. 좌우여백은 블럭 요소일 때 가로 중앙 정렬이 기본 */
-        max-width : 80% ;
-        heigth : auto ;
+        max-width : 80% ; /* 
       }
       /* bodyhome은 중앙정렬, 주 로고와 메뉴는 그리드 설정, 사진은 박스모델로 아래에 */
     </style>
