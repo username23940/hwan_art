@@ -22,21 +22,21 @@
         align-items: center;
         justify-content: space-between ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
         그래서 이때는 gap 필요 없음(어차피 양끝으로 밀고 가운데가 전부 간격) */
+        
         padding-left: 100px ;
         padding-right : 100px ; /* 너무 왼쪽끝 오른쪽 끝이라 패딩 부여 */
         margin-top : 20px ; /* 위에서 조금 띄우기 */
          /* gap : 20px로고와 메뉴 사이 간격 OR
         gap: 2vw (화면 너비의 2%)  OR  gap :  clamp(20px, 2vw, 100px)
         (margin과 달리 아이템 사이에만 간격 주고, 바깥쪽에는 안줌 */
-       
+        
+        background: #f4f4f4; 
+        position: fixed; /* 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 */ 
+        top: 0; left: 0; width: 100%; /* 화면 전체 너비. 고정된 컨테이너를 0,0 좌표에 맞춤. fixed 쓸 때 반드시 지정 */
+        
+
       }
-        /*
-      background: #f4f4f4; 
-      position: fixed; /* 상단 고정 */ 
-      top: 0; left: 0; width: 100%; /* 화면 전체 너비 */ 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1); } 
-      이 코드는 왜 필요한거야
-*/
+        /* box-shadow: 0 2px 5px rgba(0,0,0,0.1);   */
 
       
       .navbar {
