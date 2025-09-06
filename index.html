@@ -15,7 +15,7 @@
       */
       body { /* 전체 중앙정렬 */
         margin : 0 ;
-        text-align : center ;
+        text-align : center ; 
       }
       .container { /* 로고와 메뉴 사이 가로 정렬 */ 
         display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
@@ -31,8 +31,10 @@
         (margin과 달리 아이템 사이에만 간격 주고, 바깥쪽에는 안줌 */
         
         background: #f4f4f4; 
-        position: fixed; /* 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 */ 
-
+        position: fixed; /* 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
+          그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 navbar를 인식하지 못하고 겹치기 때문에, 높이만큼
+          패딩부여 필요 */ 
+        top :0 ; left:0; width:100%;
       }
       .navbar {
         border : 1px solid transparent ;
