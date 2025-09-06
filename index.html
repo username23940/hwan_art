@@ -41,7 +41,10 @@
         align-items : center ;
         justify-content : center ; // /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분 */ 
         gap : 20px /* li 끼리의 간격 */
-        text-decoration-line : none ;  /* 링크들의 밑줄 제거 */
+        
+      }
+      ul a {
+        text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
       }
       img { /* container 선택자로 활용 가능하지만 이미지는 다른 속성이므로 분리 */
         display : block ;
