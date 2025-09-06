@@ -42,7 +42,7 @@
         align-items : center ;
         justify-content : center ;
         gap : 20px /* li 끼리의 간격 */
-        
+        text-decoration : none ;
       }
       img { /* container 선택자로 활용 가능하지만 이미지는 다른 속성이므로 분리 */
         display : block ;
@@ -57,12 +57,12 @@
     <div class='container'>
       <h1 class='navbar'><span class='logo-first'>Hwan</span>Kim</h1>
       <ul>
-        <li ><a style='color : blue' href='index.html'>Press</a></li>
-        <li ><a style='color : mint' href='index.html'>Exhibitions</a></li>
-        <li ><a style='color : red' href='index.html'>Works</a></li>
-        <li ><a style='color : green' href='index.html'>Columns</a></li>
-        <li ><a style='color : purple' href='index.html'>About</a></li>
-      </ul>
+        <li><a style='color : blue' href='index.html'>Press</a></li>
+        <li><a style='color : mint' href='index.html'>Exhibitions</a></li>
+        <li><a style='color : red' href='index.html'>Works</a></li>
+        <li><a style='color : green' href='index.html'>Columns</a></li>
+        <li><a style='color : purple' href='index.html'>About</a></li>
+      </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
     </div>
     <img src="https://www.shutterstock.com/image-photo/ani-ruins-old-city-ruinskarsturkey-260nw-2070129599.jpg">
   </body>
