@@ -22,7 +22,7 @@
       .container { /* 로고와 메뉴 사이 가로 정렬 */ 
         display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
         align-items: center;
-        justify-content: space-between ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
+        justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
         그래서 이때는 gap 필요 없음(어차피 양끝으로 밀고 가운데가 전부 간격) */
         
         padding-left: 100px ;
@@ -31,7 +31,7 @@
          /* gap : 20px로고와 메뉴 사이 간격 OR
         gap: 2vw (화면 너비의 2%)  OR  gap :  clamp(20px, 2vw, 100px)
         (margin과 달리 아이템 사이에만 간격 주고, 바깥쪽에는 안줌 */
-        
+        gap : clamp(20px, 2vw, 100px) ;
         background: #f4f4f4; 
         position: fixed; /* 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
           그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 navbar를 인식하지 못하고 겹치기 때문에, 높이만큼
@@ -60,7 +60,7 @@
       }
       img { /* container 선택자로 활용 가능하지만 이미지는 다른 속성이므로 분리 */
         display : block ;
-        margin : 107.875 auto 0 ; /* 상단(position fixed 고려), 좌우, 하단 여백 순서. 좌우여백은 블럭 요소일 때 가로 중앙 정렬이 기본 */
+        margin : 107.875px auto 0 ; /* 상단(position fixed 고려), 좌우, 하단 여백 순서. 좌우여백은 블럭 요소일 때 가로 중앙 정렬이 기본 */
         max-width : 80% ; 
       }
       /* bodyhome은 중앙정렬, 주 로고와 메뉴는 그리드 설정, 사진은 박스모델로 아래에 */
