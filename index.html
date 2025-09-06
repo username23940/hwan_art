@@ -25,9 +25,7 @@
         justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
         그래서 이때는 gap 필요 없음(어차피 양끝으로 밀고 가운데가 전부 간격) -> 해보니까 강제로 양끝으로 가서 
         확대축소시 안예쁨*/
-        
-        padding-left: 100px ;
-        padding-right : 100px ; /* 너무 왼쪽끝 오른쪽 끝이라 패딩 부여 */
+      
         margin-top : 20px ; /* 위에서 조금 띄우기 */
          /* gap : 20px로고와 메뉴 사이 간격 OR
         gap: 2vw (화면 너비의 2%)  OR  gap :  clamp(20px, 2vw, 100px)
@@ -36,7 +34,7 @@
         background: #f4f4f4; 
         position: fixed; /* 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
           그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 navbar를 인식하지 못하고 겹치기 때문에, 높이만큼
-          패딩부여 필요 */ 
+          body에 컨테이너 크기만큼 패딩부여 필요 */ 
         top :0 ; left:0; width:100%;
       }
       .navbar {
