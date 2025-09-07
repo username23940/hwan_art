@@ -24,7 +24,9 @@
         align-items: center;
         justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
         그래서 이때는 gap 필요 없음(어차피 양끝으로 밀고 가운데가 전부 간격) -> 해보니까 강제로 양끝으로 가서 
-        확대축소시 안예쁨*/
+        확대축소시 안예쁨. 또한 양끝으로 가서 좌우 패딩을 주면, 패딩은 컨테이너 안쪽 공간이기 때문에 실제 flex 공간이
+        줄어들어, 이 줄어든 영역안에서 중앙에 오기 때문에 살짝 오른쪽으로 치우친 느낌 
+        space around, evenly는 각각 아이템 사이 간격이 같고 양끝 간격은 그 절반 & 아이템 사이와 양끝간격 동일*/
       
         margin-top : 20px ; /* 위에서 조금 띄우기 */
          /* gap : 20px로고와 메뉴 사이 간격 OR
@@ -51,8 +53,8 @@
         display : flex ;
         align-items : center ;
         justify-content : center ;  
-        gap : 20px ; /* li 끼리의 간격 */
-        
+        gap : clamp(20px, 2vw, 40px) ; /* li 끼리의 간격 */
+        padding-right : 40px ;
       }
       ul a {
         text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
@@ -60,14 +62,19 @@
       img { /* container 선택자로 활용 가능하지만 이미지는 다른 속성이므로 분리 */
         display : block ;
         margin : 0 auto 0 ; /* 상단(position fixed 고려), 좌우, 하단 여백 순서. 좌우여백은 블럭 요소일 때 가로 중앙 정렬이 기본 */
-        max-width : 80% ; 
+        max-width : 80% ; /* max-width는 브라우저 창을 줄이면 이미지도 줄어듦. 부모 요소의 80%까지만 커질 수 있기에,
+        부모 요소가 작아지면 함께 줄어듦(반응형), 커지면 실제 자신의 원본 크기까지만 도달.
+        원본도 늘어나게 하고 싶다면 width 사용(무조건 이 크기로 맞춤. 그러나 해상도는 깨짐) 
+        width : 100%, padding :20%로 주면, 퍼센트끼리 합쳐져서 박스가 커져버려서 밖으로 벗어남. 화면을 채우면서 좌우여백을 원하면
+        부모 컨테이너에 padding 부여 */
+        height : auto ; /* 가로세로 비율 유지. 기본 css이라서 안써도 되긴 하지만, 명시적 의미 부여(관용적), 리셋, 오버라이드 대비 */
       }
       /* bodyhome은 중앙정렬, 주 로고와 메뉴는 그리드 설정, 사진은 박스모델로 아래에 */
     </style>
   </head>
   <body class='bodyhome'>
     <div class='container'>
-      <h1 class='navbar'><span class='logo-first'>Hwan</span>Kim</h1>
+      <h1 class='navbar'><span class='logo-first'>QUEUE</span>STACK</h1>
       <ul>
         <li><a style='color : blue' href='index.html'>Press</a></li>
         <li><a style='color : mediumspringgreen' href='index.html'>Exhibitions</a></li>
