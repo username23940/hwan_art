@@ -22,7 +22,7 @@
         
         space around, evenly는 각각 아이템 사이 간격이 같고 양끝 간격은 그 절반 & 아이템 사이와 양끝간격 동일 */
       
-        margin-top : 20px ; /* 위에서 조금 띄우기 */
+        margin-top : 20px ; /* 위에서 조금 띄우기. padding 사용 시 배경색이 패딩까지 적용. 마진은 절대 적용 X */
         margin-bottom : 20px ; /* 사진과의 간격 만들기(어차피 position fixed라 body에서 padding 주지만, margin-top과의 통일성 고려 */
         /* gap : 20px로고와 메뉴 사이 간격. 고정된 gap OR
         gap: 2vw (화면 너비의 2%)  OR  gap :  clamp(20px, 2vw, 100px). 유연하게 변하는 gap
@@ -101,11 +101,11 @@
     <div class='container'>
       <h1 class='navbar'><span class='logo-first'>QUEUE</span>STACK</h1>
       <ul>
-        <li><a style='color : blue' href='index.html'>Press</a></li>
-        <li><a style='color : mediumspringgreen' href='index.html'>Exhibitions</a></li>
-        <li><a style='color : red' href='index.html'>Works</a></li>
-        <li><a style='color : green' href='index.html'>Columns</a></li>
-        <li><a style='color : purple' href='index.html'>About</a></li>
+        <li><a style='color : blue' href='press.html'>Press</a></li>
+        <li><a style='color : mediumspringgreen' href='exhibitions.html'>Exhibitions</a></li>
+        <li><a style='color : red' href='works.html'>Works</a></li>
+        <li><a style='color : green' href='columns.html'>Columns</a></li>
+        <li><a style='color : purple' href='about.html'>About</a></li>
       </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
     </div>
     <img src="https://images.unsplash.com/photo-1756908604030-04861dc79820">
