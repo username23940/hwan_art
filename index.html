@@ -40,6 +40,20 @@
         top :0 ; left:0; width:100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. fixed가 들어가면 레이아웃 흐름에서 제거되므로
         자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
       }
+
+      @media(max-width : 768px) {
+        .container{
+          flex-direction : column ;
+          align-items : center ;
+          height : auto ;
+          padding : 10px 20px ;
+        }
+        ul {
+          flex-direction : column ;
+          gap : 10px;
+          
+        }
+      }
       
       .navbar {
         border : 1px solid transparent ;
