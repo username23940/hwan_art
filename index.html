@@ -14,15 +14,7 @@
         display: grid;  
         grid-template-rows: auto 1fr; /* grid 컨테이너 안에서 행(가로)의 높이 규칙을 정의. 
         row하면 첫번째 요소는 컨텐츠의 높이에 맞게 자동 결정. 두번째 행은 나머지 공간 찾.(만약에 푸터처럼 추가적인 요소가 있다면 auto 뒤에 또 쓰면 됨) */
-  
-        position: fixed; /* 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
-          그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 navbar를 인식하지 못하고 겹치기 때문에, 높이만큼
-          body에 컨테이너 크기만큼 패딩부여 필요 */ 
-        top :0 ; left:0; /* fixed일 때 시작 좌표를 고정하지 않으면 레이아웃 흐름으로 인식함 3*/
-        width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
-        fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
       }
-
 
       .grid h1, ul {
         background : #f4f4f4
@@ -31,6 +23,12 @@
         border : 1px solid transparent ;
         display : grid;
         grid-template-columns:auto 1fr; /* QEUEU와 STACK을 가로 정렬 */
+        position: fixed; /* 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
+          그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 navbar를 인식하지 못하고 겹치기 때문에, 높이만큼
+          body에 컨테이너 크기만큼 패딩부여 필요 */ 
+        top :0 ; left:0; /* fixed일 때 시작 좌표를 고정하지 않으면 레이아웃 흐름으로 인식함 3*/
+        width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
+        fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
       }
       .navbar .logo {
         font-size : 1em ;
@@ -84,7 +82,7 @@
           <li><a style='color : purple' href='about.html'>About</a></li>
         </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
       </div>  
-    <img src="https://images.unsplash.com/photo-1756908604030-04861dc79820">
+      <img src="https://images.unsplash.com/photo-1756908604030-04861dc79820">
     </div>
 
   </body>
