@@ -84,12 +84,13 @@
 
     .press {
       display : grid ;
-      grid-template-columns : auto 1fr ;
-      padding : 30px ;
+      grid-template-columns : 1fr 1fr ; /* 그리드를 첫, 두번째 요소가 균등 분배*/ 
+      padding : 100px ;
+      padding-top : 50px ;
       gap :20px ;
     }
     .press img {
-      width : 40% ;
+      width : 100% ; /* grid의 첫번째 요소 너비 전부 사용 */
       justify-self : center ;
       margin : 30px
        /* padding : 5% ;  %로 해야 반응형 
