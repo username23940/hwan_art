@@ -7,7 +7,7 @@
       
       body { /* 전체 중앙정렬 */
         margin : 0 ; 
-        padding-top : 127.875px ; 
+        padding-top : 93px ; 
       }
       
       .grid { /* 로고와 메뉴 사이 가로 정렬 */ 
@@ -29,6 +29,10 @@
         width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
         fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
         background : #f4f4f4
+        margin:37px ; /* grid로 인한 template rows 자동 정렬에 따른 마진 부여 */
+      }
+      .navbar .logo .logo-first {
+        color : red ;
       }
       .navbar .logo {
         font-size : 1em ;
@@ -59,7 +63,7 @@
       ul {
         list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
         display : flex ;
-        align-items : center ;
+        align-items : center ; /* align-items : 컨테이너에 적용해, 자식 전체에 모두가 세로정렬 . self는 자기자신을 세로정렬 */
         justify-content : center ;  
         gap : clamp(20px, 2vw, 40px) ; /* li 끼리의 간격. 없으면 간격 안띄워짐 */
       }
