@@ -32,11 +32,11 @@
         display : grid;
         grid-template-columns:auto 1fr; /* QEUEU와 STACK을 가로 정렬 */
       }
-      h1 {
-        letter-spacing : 8px ; /* 자간 */
-      }
-      h1 .logo-first {
+
+      .navbar .logo-first {
         color : red ;
+        font-size : 1em ;
+        letter-spacing : 8px ; /* 자간 */
       }
       ul {
         list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
@@ -73,14 +73,16 @@
   </head>
   <body>
     <div class='grid'>
-      <h1 class='navbar'><span class='logo-first'>QUEUE</span>STACK</h1>
-      <ul>
-        <li><a style='color : blue' href='press.html'>Press</a></li>
-        <li><a style='color : mediumspringgreen' href='exhibitions.html'>Exhibitions</a></li>
-        <li><a style='color : red' href='works.html'>Works</a></li>
-        <li><a style='color : green' href='columns.html'>Columns</a></li>
-        <li><a style='color : purple' href='about.html'>About</a></li>
-      </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
+      <div class='navbar'>
+        <span class='logo-first'>QUEUE</span>STACK
+        <ul>
+          <li><a style='color : blue' href='press.html'>Press</a></li>
+          <li><a style='color : mediumspringgreen' href='exhibitions.html'>Exhibitions</a></li>
+          <li><a style='color : red' href='works.html'>Works</a></li>
+          <li><a style='color : green' href='columns.html'>Columns</a></li>
+          <li><a style='color : purple' href='about.html'>About</a></li>
+        </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
+      </div>  
     <img src="https://images.unsplash.com/photo-1756908604030-04861dc79820">
     </div>
 
