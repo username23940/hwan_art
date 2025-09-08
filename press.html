@@ -37,6 +37,9 @@
       width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
       fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
     }
+    .container .navbar a {
+      text-decoration-line : none ;
+    }
   
     @media(max-width : 768px) { /* 모바일 화면 디자인 */
       body{
@@ -89,7 +92,7 @@
   <body class='bodyhome'>
   
   <div class='container'>
-    <h1 class='navbar'><span class='logo-first'>QUEUE</span>STACK</h1>
+    <h1 class='navbar'><a href='index.html'><span class='logo-first'>QUEUE</span>STACK</a></h1>
     <ul>
       <li><a style='color : blue' href='press.html'>Press</a></li>
       <li><a style='color : mediumspringgreen' href='exhibitions.html'>Exhibitions</a></li>
