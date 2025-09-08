@@ -89,8 +89,15 @@
       padding-top : 50px ;
       gap :20px ;
     }
-    .press img {
-      width : 100% ; /* grid의 첫번째 요소 너비 전부 사용 */
+    .press .img-wrapper {
+      background: #87CEEB;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .press .img-wrapper img {
+      width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
       justify-self : center ;
       margin : 30px
        /* padding : 5% ;  %로 해야 반응형 
@@ -121,7 +128,9 @@
   </div>
     
   <div class='press'>
-    <img src="https://images.unsplash.com/photo-1756680967517-18c125f4d092?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <div class ='img-wrapper'>
+      <img src="https://images.unsplash.com/photo-1756680967517-18c125f4d092?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    </div>
     <h1>Press<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>d<br><br><br><br><br><br>d<br><br><br><br><br><br><br><br><br>d
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>dsfs</h1>
   </div>
