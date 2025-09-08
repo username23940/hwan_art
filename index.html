@@ -32,11 +32,12 @@
         display : grid;
         grid-template-columns:auto 1fr; /* QEUEU와 STACK을 가로 정렬 */
       }
-
-      .navbar .logo-first {
-        color : red ;
+      .navbar .logo {
         font-size : 1em ;
         letter-spacing : 8px ; /* 자간 */
+      }
+      .navbar .logo-first {
+        color : red ;
       }
       ul {
         list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
@@ -74,7 +75,7 @@
   <body>
     <div class='grid'>
       <div class='navbar'>
-        <span class='logo-first'>QUEUE</span>STACK
+        <div class='logo'><span class='logo-first'>QUEUE</span>STACK</div>
         <ul>
           <li><a style='color : blue' href='press.html'>Press</a></li>
           <li><a style='color : mediumspringgreen' href='exhibitions.html'>Exhibitions</a></li>
