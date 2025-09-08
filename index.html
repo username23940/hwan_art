@@ -12,7 +12,8 @@
       
       .grid { /* 로고와 메뉴 사이 가로 정렬 */ 
         display: grid;  
-        grid-template-rows: auto 1fr;
+        grid-template-rows: auto 1fr; /* grid 컨테이너 안에서 행(세로)의 높이 규칙을 정의. 첫번째 요소는 컨텐츠의 높이에
+        맞게 자동 결정. 두번째 행은 나머지 공간 찾.(만약에 푸터처럼 추가적인 요소가 있다면 auto 뒤에 또 쓰면 됨) */
 
         
         justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
@@ -43,6 +44,9 @@
       
       .navbar {
         border : 1px solid transparent ;
+        display : grid;
+        grid-template-columns:auto 1fr;
+
       }
       h1 {
         letter-spacing : 8px ; /* 자간 */
