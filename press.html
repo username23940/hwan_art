@@ -110,12 +110,14 @@
       margin :0 ;
       padding : 30px ;
       display : grid ;
-      grid-template-columns : 50px 1fr ;
+      grid-template-rows : auto 1fr ; /* exclude, main만 존재하므로(고정시킬거, 본문) 세로 정렬. 본문은 고정시킬거가 다 들어간 후 남는자리에 들어가게 */
     }
     .press .text-wrapper .exclude {
       align-self : start ;
     }
     .main {
+      display : grid;
+      grid-template-columns : 50px 1fr ;
       align-self : start ;
     }
       
@@ -146,8 +148,8 @@
         <h1>Press</h1>
         <h2>CURRENT</h2><h2>PAST</h2>
       </div>
-      <h3>2025</h3>
       <div class='main'>
+        <h3>2025</h3>
         <p>David Someone at North Korea Gallery, PyeongYang</p>
         <a href ='https://www.theartnewspaper.com/2025/09/02/serpentine-galleries-announces-its-first-ever-hockney-exhibition'>Gallery in North its First-ever David's Exhibition</a>
         <p>Gareth Harris / The Art News / 2 September 2025</p>      
