@@ -4,6 +4,26 @@
     <title>Hwan Kim</title>
     <meta charset='utf-8'>
     <style>
+      @media(max-width : 768px) { /* 모바일 화면 디자인 */
+        body{
+          padding-top : 274.875px ;
+        }
+        .container{
+          flex-direction : column ;
+          align-items : center ;
+          gap: 10px ;
+          margin : 0;
+        }
+        .container ul {
+          flex-direction : column ;
+          padding-left: 0px ;
+          gap : 10px ;
+        }
+      }
+      .container .navbar a {
+        text-decoration-line : none ;
+        color : black ;
+      }
       
       body { /* 전체 중앙정렬 */
         margin : 0 ;
@@ -37,39 +57,16 @@
         width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
         fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
       }
-
-      @media(max-width : 768px) { /* 모바일 화면 디자인 */
-        body{
-          padding-top : 274.875px ;
-        }
-        .container{
-          flex-direction : column ;
-          align-items : center ;
-          gap: 10px ;
-          margin : 0;
-        }
-        .container ul {
-          flex-direction : column ;
-          padding-left: 0px ;
-          gap : 10px ;
-        }
-      }
-      .container .navbar a {
-        text-decoration-line : none ;
-        color : black ;
-      }
-      
-      
-      .navbar {
+      .container .navbar {
         border : 1px solid transparent ;
       }
-      
       h1 {
         letter-spacing : 8px ; /* 자간 */
       }
       h1 .logo-first {
         color : red ;
       }
+      
       ul {
         list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
         display : flex ;
@@ -81,8 +78,8 @@
         text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
       }
       
-      img { /* container 선택자로 활용 가능하지만 이미지는 다른 속성이므로 분리 */
-        display : block ;
+      img { 
+        display : block ; 
         margin : 0 auto 0 ; /* 상단(position fixed 고려), 좌우, 하단 여백 순서. 좌우여백은 블럭 요소일 때 auto 쓰면 가로 중앙 정렬 
         원래 img는 인라인 요소이므로 block 처리 안하면 좌우 auto margin 무시 */
         max-width : 800px ;
@@ -106,7 +103,6 @@
   <body class='bodyhome'>
     <div class='container'>
       <h1 class='navbar'><a href='index.html'><span class='logo-first'>QUEUE</span>STACK</a></h1>
-
       <ul>
         <li><a style='color : blue' href='press.html'>Press</a></li>
         <li><a style='color : mediumspringgreen' href='exhibitions.html'>Exhibitions</a></li>
@@ -115,6 +111,7 @@
         <li><a style='color : purple' href='about.html'>About</a></li>
       </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
     </div>
+    
     <img src="https://images.unsplash.com/photo-1756908604030-04861dc79820">
   </body>
 </html>
