@@ -88,22 +88,20 @@
     .press {
       display : grid ;
       grid-template-columns : 1fr 1fr ; /* 그리드를 첫, 두번째 요소가 균등 분배*/ 
-      padding : 100px ;
+      padding : 10% ;
       padding-top : 50px ;
-      gap :20px ;
+      gap : 5% ;
     }
     .press .img-wrapper {
       background: #87CEEB;
       display: flex; 
-      justify-content: center;
-      align-items: center;
+      justify-content: center; /* 가로 중앙 정렬 */
+      align-items: flex-start; /* 세로는 상단 고정 (grid일 경우 : start) */
     }
     .press .img-wrapper img {
       width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
-      justify-self : center ;
-      margin : 30px ;
       /* z-index : 1 ; img-wrapper보다 항상 위에서 노출 */
-       /* padding : 5% ;  %로 해야 반응형 
+      /* padding : 5% ;  %로 해야 반응형 
       background: #87CEEB */
     }
     .press h1 {
