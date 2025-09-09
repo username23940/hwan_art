@@ -59,17 +59,16 @@
       width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
       fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
     }
-    .container .navbar a {
-      text-decoration-line : none ;
-      color : black ;
-    }
-         
     .navbar {
       border : 1px solid transparent ;
     }
     .container h1 {
       letter-spacing : 8px ; /* 자간 */
     }
+    .container .navbar a {
+      text-decoration-line : none ;
+      color : black ;
+    } 
     .container h1 .logo-first {
       color : blue ;
     } 
@@ -92,11 +91,12 @@
       padding-top : 50px ;
       gap : 5% ;
     }
-    .press .img-wrapper {
+    .press .img-wrapper { /* img의 패딩 말고, img의 칸 전체에 배경색 or 다른 기능(가운데, 상단 정렬, 캡션, 버튼)을 적용할 수 있음 */
       background: #87CEEB;
       display: flex; 
       justify-content: center; /* 가로 중앙 정렬 */
       align-items: flex-start; /* 세로는 상단 고정 (grid일 경우 : start) */
+      padding-top: 20px ;
     }
     .press .img-wrapper img {
       width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
