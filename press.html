@@ -4,7 +4,29 @@
     <meta charset="UTF-8">
     <title>Press</title>
     <style>
-    
+    /* flex, grid는 언제 쓰는가? 
+    flex : 한줄 정렬 최적화(가로, 세로 한 방향으로). 아이템 크기가 유동적일 떄 자동 정렬하기 좋음
+    grid : 2차원 레이아웃 최적화(행, 열 구조 필요시). 큰 레이아웃을 잡을 때, 공간 분할에 강함.(페이지, 섹션의 틀)
+    보통 바깥쪽 큰 레이아웃 : grid. 안쪽 세부 정렬 : flex */ 
+    /*
+    @media(max-width : 768px) {  모바일 화면 디자인 
+      body{
+        padding-top : 274.875px ;
+      }
+      .container{
+        flex-direction : column ;
+        align-items : center ;
+        gap: 10px ;
+        margin : 0;
+      }
+      .container ul {
+        flex-direction : column ;
+        padding-left: 0px ;
+        gap : 10px ;
+      }
+    }
+    */
+      
     body { /* 전체 중앙정렬 */
       margin : 0 ;
       padding-top : 127.875px ; 
@@ -51,26 +73,7 @@
     .container h1 .logo-first {
       color : blue ;
     } 
-      
-    /*
-    @media(max-width : 768px) {  모바일 화면 디자인 
-      body{
-        padding-top : 274.875px ;
-      }
-      .container{
-        flex-direction : column ;
-        align-items : center ;
-        gap: 10px ;
-        margin : 0;
-      }
-      .container ul {
-        flex-direction : column ;
-        padding-left: 0px ;
-        gap : 10px ;
-      }
-    }
-    */
-  
+    
     ul {
       list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
       display : flex ;
@@ -81,9 +84,7 @@
     ul a {
       text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
     }
-flex, grid언제쓰는지
-      img wrapper 하고.
-      글씨 추가하기
+      
     .press {
       display : grid ;
       grid-template-columns : 1fr 1fr ; /* 그리드를 첫, 두번째 요소가 균등 분배*/ 
