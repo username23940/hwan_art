@@ -13,13 +13,13 @@
       body{
         padding-top : 274.875px ;
       }
-      .container{
+      .container-wrapper{
         flex-direction : column ;
         align-items : center ;
         gap: 10px ;
         margin : 0;
       }
-      .container ul {
+      .container-wrapper ul {
         flex-direction : column ;
         padding-left: 0px ;
         gap : 10px ;
@@ -31,8 +31,15 @@
       margin : 0 ;
       padding-top : 127.875px ; 
     }
-    
-    .container { /* 로고와 메뉴 사이 가로 정렬 */ 
+
+    .container {
+      display : flex ;
+      flex-direction : rows ;
+    }
+    .container h2 {
+      color : blue ;
+    }
+    .container-wrapper { /* 로고와 메뉴 사이 가로 정렬 */ 
       display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
       align-items: center;
       justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
@@ -51,25 +58,25 @@
       (margin과 달리 아이템 사이에만 간격 주고, 바깥쪽에는 안줌 */
       gap : clamp(20px, 10vw, 1000px) ;
       
-     background: #f4f4f4; /* navbar임을 배경색으로 연하게 구분.  */
+     background: #f4f4f4; /* logo임을 배경색으로 연하게 구분.  */
       position: fixed; /* 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
-        그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 navbar를 인식하지 못하고 겹치기 때문에, 높이만큼
+        그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 logo를 인식하지 못하고 겹치기 때문에, 높이만큼
         body에 컨테이너 크기만큼 패딩부여 필요 */ 
       top :0 ; left:0; /* fixed일 때 시작 좌표를 고정하지 않으면 레이아웃 흐름으로 인식함 3*/
       width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
       fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
     }
-    .navbar {
+    .logo {
       border : 1px solid transparent ;
     }
-    .container h1 {
+    .container-wrapper h1 {
       letter-spacing : 8px ; /* 자간 */
     }
-    .container .navbar a {
+    .container-wrapper .logo a {
       text-decoration-line : none ;
       color : black ;
     } 
-    .container h1 .logo-first {
+    .container-wrapper h1 .logo-first {
       color : blue ;
     } 
     
@@ -82,6 +89,10 @@
     }
     ul a {
       text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
+    }
+
+    .sidebar {
+      text-align : right ;
     }
       
     .press {
@@ -163,18 +174,24 @@
     <link rel="stylesheet" href="styles.css">  -->
   </head>
   <body class='bodyhome'>
-  
   <div class='container'>
-    <h1 class='navbar'><a href='index.html'><span class='logo-first'>QUEUE</span>STACK</a></h1>
-    <ul>
-      <li><a style='color : blue' href='press.html'>Press</a></li>
-      <li><a style='color : mediumspringgreen' href='exhibitions.html'>Exhibitions</a></li>
-      <li><a style='color : red' href='works.html'>Works</a></li>
-      <li><a style='color : green' href='columns.html'>Columns</a></li>
-      <li><a style='color : purple' href='about.html'>About</a></li>
-    </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
+    <div class='container-wrapper-wrapper'>
+      <h1 class='logo'><a href='index.html'><span class='logo-first'>QUEUE</span>STACK</a></h1>
+      <ul>
+        <li><a style='color : blue' href='press.html'>Press</a></li>
+        <li><a style='color : mediumspringgreen' href='exhibitions.html'>Exhibitions</a></li>
+        <li><a style='color : red' href='works.html'>Works</a></li>
+        <li><a style='color : green' href='columns.html'>Columns</a></li>
+        <li><a style='color : purple' href='about.html'>About</a></li>
+      </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
+    </div>
+    <h2>PRESS / ARTICLES</h2>
   </div>
-    
+      
+  <div class='sidebar'>
+    <h2 style='color : blue ; '>PRESS / ARTICLES</h2>
+  </div>
+  
   <div class='press'>
     <div class ='img-wrapper'>
       <img src="https://images.unsplash.com/photo-1756680967517-18c125f4d092?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
@@ -208,7 +225,6 @@
       </div>
     </div>
   </div>
-!main 내용 추가, container에 press, current/past 안내 추가 !!!
 
   </body>
   </html>
