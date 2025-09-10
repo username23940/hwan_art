@@ -96,7 +96,7 @@
       text-align : center ; /* flex 쓸 필요 없이(여러요소, 교차축 필요시 사용) oR index.html처럼 block 요소로 하고 margin 0 auto ; */
       /* justify-content: center;  가로 중앙 정렬(flex일 경우) 
       align-items: flex-start; 세로는 상단 고정 (grid일 경우 : start) */
-      padding-top: 20px ;
+      padding-top: 7% ;
     }
     .img-wrapper img {
       width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
@@ -123,16 +123,17 @@
     }
     .text-wrapper .exclude .exclude-wrapper {
       display : grid ;
-      grid-template-columns : 1fr 1fr ;
-      margin : 15% 0 ;
+      grid-template-columns : auto 1fr ;
+      margin : 7% 0 ;
+      gap : 10%
     }
     .text-wrapper .exclude .exclude-wrapper a {
       text-decoration-line : none ;
+      color : black ;
     }
     .main {
       display : grid;
-      grid-template-columns : 50px 1fr ;
-      align-self : start ;
+      grid-template-columns : 20% 1fr ;
     }
     .main-wrapper
       
