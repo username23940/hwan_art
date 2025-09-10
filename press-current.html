@@ -29,13 +29,13 @@
       
     body { /* 전체 중앙정렬 */
       margin : 0 ;
-      /* container 추가하며 fixed를 sticky로 레이아웃 흐름에 포함. padding-top : 127.875px ;  패딩 필요 없음 OR fixed 유지하고, container에 flex를 제외 just 박스로 쓰고
-      wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 */
+      padding-top : 127.875px ;   /* fixed 유지하고, container에 flex를 제외 just 박스로 쓰고 wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 
+      OR container 추가하며 fixed를 sticky로 레이아웃 흐름에 포함. 패딩 필요 없음 */
     }
 
     .container {
       display : flex ;
-      flex-direction : rows ;
+      flex-direction : row ;
     }
     .container h2 {
       color : blue ;
@@ -60,11 +60,11 @@
       gap : clamp(20px, 10vw, 1000px) ;
       
      background: #f4f4f4; /* logo임을 배경색으로 연하게 구분.  */
-      position: sticky; /* fixed : 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
+      position: fixed; /* fixed : 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
         그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 logo를 인식하지 못하고 겹치기 때문에, 높이만큼
         body에 컨테이너 크기만큼 패딩부여 필요
-        sticky는 부모 흐름을 유지하면서 스크롤 가능(fixed 일 경우 container안에서 container-wrapper는 빠지니까 요소 1개로 인식) */ 
-      /* top :0 ; left:0;  fixed일 때 시작 좌표를 고정하지 않으면 레이아웃 흐름으로 인식함. sticky는 필요 없음 */
+        sticky는 부모 흐름을 유지하면서 스크롤 시 유지 X (fixed 일 경우 container안에서 container-wrapper는 빠지니까 요소 1개로 인식) */ 
+      top :0 ; left:0; /* fixed일 때 시작 좌표를 고정하지 않으면 레이아웃 흐름으로 인식함. sticky는 필요 없음 */
       width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
       fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
     }
@@ -81,8 +81,12 @@
     .container-wrapper h1 .logo-first {
       color : blue ;
     } 
-    
-    ul {
+    .container h2 {
+      text-align : right ;
+    }
+
+
+      ul {
       list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
       display : flex ;
       align-items : center ;
@@ -91,10 +95,6 @@
     }
     ul a {
       text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
-    }
-
-    .sidebar {
-      text-align : right ;
     }
       
     .press {
