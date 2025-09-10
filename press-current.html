@@ -32,7 +32,7 @@
       padding-top : 127.875px ;   /* fixed 유지하고, container에 flex를 제외 just 박스로 쓰고 wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 
       OR container 추가하며 fixed를 sticky로 레이아웃 흐름에 포함. 패딩 필요 없음 */
     }
-
+  
     .container {
       display : flex ;
       flex-direction : row ;
@@ -81,11 +81,11 @@
     .container-wrapper h1 .logo-first {
       color : blue ;
     } 
-    .container h2 {
+    .container .sidebar {
       text-align : right ;
     }
-
-
+  
+  
       ul {
       list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
       display : flex ;
@@ -169,7 +169,7 @@
       font-size : small ;
       color : black ;
     }
-
+  
   </style>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A basic HTML5 template">
@@ -187,7 +187,7 @@
         <li><a style='color : purple' href='about.html'>About</a></li>
       </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
     </div>
-    <h2>PRESS / ARTICLES</h2>
+    <h2 class='sidebar'>PRESS / ARTICLES</h2>
   </div>
   
   <div class='press'>
@@ -223,7 +223,7 @@
       </div>
     </div>
   </div>
-
+  relative와 absolute 차이(press / article 배치), past에 복사, exhibition 탐색
   </body>
   </html>
   
