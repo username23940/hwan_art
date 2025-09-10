@@ -120,6 +120,10 @@
     .text-wrapper .exclude {
       align-self : start ;
     }
+    .text-wrapper .exclude .exclude-wrapper {
+      display : grid ;
+      grid-template-columns : 1fr 1fr
+    }
     .main {
       display : grid;
       grid-template-columns : 50px 1fr ;
@@ -153,7 +157,10 @@
     <div class='text-wrapper'> 
       <div class='exclude'>
         <h1>Press</h1>
-        <h2>CURRENT</h2><h2>PAST</h2>
+        <div class='exclude-wrapper'>
+          <a href=''>CURRENT</a>
+          <a href=''>PAST</a>
+        </div>
       </div>
       <div class='main'>
         <h3>2025</h3>
