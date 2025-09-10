@@ -116,6 +116,7 @@
       padding : 30px ;
       display : grid ;
       grid-template-rows : auto 1fr ; /* exclude, main만 존재하므로(고정시킬거, 본문) 세로 정렬. 본문은 고정시킬거가 다 들어간 후 남는자리에 들어가게 */
+      color : blue ;
     }
     .text-wrapper .exclude {
       align-self : start ;
@@ -135,9 +136,22 @@
       display : grid;
       grid-template-columns : 20% 1fr ;
       gap : 10% ;
+      justify-self : center ;
+    }
+    .main-wrapper .subject {
+      font-size : large ;      
+    }
+    .main-wrapper .description {
+      font-size : small ;
+    }
+    .main-wrapper .description a {
+      text-decoration-line : none ;
+    }  
+    .main-wrapper .info {
+      font-size : small ;
+      color : black ;
     }
 
-      
   </style>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A basic HTML5 template">
