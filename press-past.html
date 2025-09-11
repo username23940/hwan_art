@@ -8,7 +8,7 @@
     flex : 한줄 정렬 최적화(가로, 세로 한 방향으로). 아이템 크기가 유동적일 떄 자동 정렬하기 좋음
     grid : 2차원 레이아웃 최적화(행, 열 구조 필요시). 큰 레이아웃을 잡을 때, 공간 분할에 강함.(페이지, 섹션의 틀)
     보통 바깥쪽 큰 레이아웃 : grid. 안쪽 세부 정렬 : flex */ 
-    /*
+    */
     /* position의 relative와 absolute 속성값. relative는 요소를 원래 자리에서 상대적으로 이동. 부모나 다른 요소에 영향 없이
       자신의 위침나 이동. 이동 안하면 원래 자리 그대로. 다른 요소들은 relative가 원래 자리 차지한다고 생각해서 문서 흐름 깨지 X
       absolute는 요소를 문서 흐름에서 제거, 가장 가까운 position 중 relative, absolute, fixed인 부모를 기준으로(기준점) 그 안에서 배치. */
@@ -37,7 +37,7 @@
     }
     */
       
-    body { /* 전체 중앙정렬 */
+    .bodyhome { /* 전체 중앙정렬 */
       margin : 0 ;
       padding-top : 127.875px ;   /* fixed 유지하고, container에 flex를 제외 just 박스로 쓰고 wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 
       OR container 추가하며 fixed를 sticky로 레이아웃 흐름에 포함. 패딩 필요 없음 */
