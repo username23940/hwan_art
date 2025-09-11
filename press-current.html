@@ -9,6 +9,7 @@
     grid : 2차원 레이아웃 최적화(행, 열 구조 필요시). 큰 레이아웃을 잡을 때, 공간 분할에 강함.(페이지, 섹션의 틀)
     보통 바깥쪽 큰 레이아웃 : grid. 안쪽 세부 정렬 : flex */ 
     /*
+    /* align 관련 css 속성 */
     @media(max-width : 768px) {  모바일 화면 디자인 
       body{
         padding-top : 274.875px ;
@@ -82,7 +83,11 @@
       color : blue ;
     } 
     .container .sidebar {
-      text-align : right ;
+      position : absolute ;
+      top : 0;
+      right : 0;
+      margin :0 ;
+      color : blue ;
     }
   
   
@@ -130,6 +135,7 @@
       display : grid ;
       grid-template-rows : auto 1fr ; /* exclude, main만 존재하므로(고정시킬거, 본문) 세로 정렬. 본문은 고정시킬거가 다 들어간 후 남는자리에 들어가게 */
       color : blue ;
+      position : relative ;
     }
     .text-wrapper .exclude .exclude-wrapper {
       display : grid ;
