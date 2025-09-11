@@ -9,7 +9,16 @@
     grid : 2차원 레이아웃 최적화(행, 열 구조 필요시). 큰 레이아웃을 잡을 때, 공간 분할에 강함.(페이지, 섹션의 틀)
     보통 바깥쪽 큰 레이아웃 : grid. 안쪽 세부 정렬 : flex */ 
     /*
-    /* align 관련 css 속성 */
+    /* position의 relative와 absolute 속성값. relative는 요소를 원래 자리에서 상대적으로 이동. 부모나 다른 요소에 영향 없이
+      자신의 위침나 이동. 이동 안하면 원래 자리 그대로. 다른 요소들은 relative가 원래 자리 차지한다고 생각해서 문서 흐름 깨지 X
+      absolute는 요소를 문서 흐름에서 제거, 가장 가까운 position 중 relative, absolute, fixed인 부모를 기준으로(기준점) 그 안에서 배치. */
+    /* align 관련 css 속성 
+    text-align : 인라인 요소 텍스트(블록 요소 자체는 영향 X, 내부 콘텐츠만 정렬)
+    align-tiems : flex, grid container 안의 자식들을 정렬.
+    align-self : flex, grid container 내부의 아이템. align-items를 덮어쓰고 특정 아이템만 개별 정렬.
+    justify-content  flex, grid container 안의 자식들을 정렬 
+    place-items : grid container에서 align-items와 justify-items를 동시에 */
+      
     @media(max-width : 768px) {  모바일 화면 디자인 
       body{
         padding-top : 274.875px ;
@@ -83,7 +92,9 @@
       color : blue ;
     } 
     .container .sidebar {
-
+      position : absolute ;
+      top : 10% ;
+      right : 20% ;
     }
   
   
