@@ -66,10 +66,8 @@
       h1 .logo-first {
         color : red ;
       }
-      .container .menu{
-        display : flex ;
-      } 
-      .container .menu > li { /* menu class 안 직계 li는 press */
+
+      .container .menu > a { /* menu class 안 직계 li는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
         position : relative ;
       }
       .container .submenu {
@@ -79,7 +77,7 @@
         left : -110% ;
       }
       .container li:hover .submenu { /* nav class 안의 li 중, 마우스를 올렸을 때(:hover) 활성된 그 li만 선택 */
-        display : block ;
+        display : block ; /* 원래 숨겨진 submenu를 조건부 선택자 :hover와 연결해 보이게 함*/
     }
       
       ul {
@@ -90,7 +88,7 @@
         gap : clamp(20px, 2vw, 40px) ; /* li 끼리의 간격. 없으면 간격 안띄워짐 */
       }
       ul a {
-        text-decoration : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
+        text-decoration : none ;  /* 모든 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
       }
       
       img { 
@@ -119,15 +117,13 @@
     <div class='container'>
       <h1 class='navbar'><a href='index.html'><span class='logo-first'>QUEUE</span>STACK</a></h1>
       <ul>
-        <div class='menu'>
-          <li>
-            <a style='color : blue' href='press-current.html'>Press</a>
-            <ul class='submenu'>
-              <li><a href ='press-current.html' color='blue'>Current</a>
-              <li><a href ='press-past.html' color='blue'>Past</a>
-            </ul>
-          </li>
-        </div>  
+        <li class='menu'>
+          <a style='color : blue' href='press-current.html'>Press</a>
+          <ul class='submenu'>
+            <li><a href ='press-current.html' style='color :blue'>Current</a>
+            <li><a href ='press-past.html' style='color :blue'>Past</a>
+          </ul>
+        </li> 
         <li><a style='color : #EC9F53' href='exhibitions.html'>Exhibitions</a></li>
         <li><a style='color : red' href='works.html'>Works</a></li>
         <li><a style='color : green' href='columns.html'>Columns</a></li>
