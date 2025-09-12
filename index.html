@@ -14,10 +14,10 @@
           gap: 10px ;
           margin : 0;
         }
-        .container ul {
-          flex-direction : column ;
-          padding-left: 0px ;
-          gap : 10px ;
+      .container ul {
+        flex-direction : column ;
+        padding-left: 0px ;
+        gap : 10px ;
         }
       }
       .container .navbar a {
@@ -66,6 +66,21 @@
       h1 .logo-first {
         color : red ;
       }
+      .container .menu{
+        display : flex ;
+      } 
+      .container .menu > li { /* 자식을 가지지 않는 menu class 안 li는 press */
+        position : relative ;
+      }
+      .container .submenu {
+        display : none ; /* 안쓰면 항상 떠있음. hover 시에만 보이려면 기본값이 숨겨져있어야 */
+        position : absolute ; /* 하위 메뉴는 부모메뉴 바로 아래 떨어지므로, 부모인 nav li에 relative로 기준점 지정. absolute로 상대적 위치 선정 */
+        top : 100% ;
+        left : 0 ;
+      }
+      .container li:hover .submenu { /* nav class 안의 li 중, 마우스를 올렸을 때(:hover) 활성된 그 li만 선택 */
+        display : block ;
+    }
       
       ul {
         list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
@@ -104,7 +119,15 @@
     <div class='container'>
       <h1 class='navbar'><a href='index.html'><span class='logo-first'>QUEUE</span>STACK</a></h1>
       <ul>
-        <li><a style='color : blue' href='press-current.html'>Press</a></li>
+        <div class='menu'>
+          <li>
+            <a style='color : blue' href='press-current.html'>Press</a>
+            <ul class='submenu'>
+              <li><a href ='press-current.html'>Current</a>
+              <li><a href ='press-past.html'>Current</a>
+            </ul>
+          </li>
+        </div>  
         <li><a style='color : #EC9F53' href='exhibitions.html'>Exhibitions</a></li>
         <li><a style='color : red' href='works.html'>Works</a></li>
         <li><a style='color : green' href='columns.html'>Columns</a></li>
