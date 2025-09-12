@@ -67,7 +67,7 @@
         color : red ;
       }
 
-      .container .menu > a { /* menu class 안 직계 li는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
+      .container .menu > a { /* menu class 안 직계 a는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
         position : relative ;
       }
       .container .submenu {
@@ -76,7 +76,7 @@
         top : 100% ;
         left : -110% ;
       }
-      .container li:hover .submenu { /* nav class 안의 li 중, 마우스를 올렸을 때(:hover) 활성된 그 li만 선택 */
+      .container a:hover .submenu { /* nav class 안의 li 중, 마우스를 올렸을 때(:hover) 활성된 그 li만 선택 */
         display : block ; /* 원래 숨겨진 submenu를 조건부 선택자 :hover와 연결해 보이게 함*/
     }
       
