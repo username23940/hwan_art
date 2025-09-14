@@ -72,7 +72,7 @@
     .container-wrapper h1 {
       letter-spacing : 8px ; /* 자간 */
     }
-    .container-wrapper .logo a {
+    .container-wrapper .navbar a {
       text-decoration-line : none ;
       color : black ;
     } 
