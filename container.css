@@ -66,7 +66,7 @@
       fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
     }
 
-    .conainer-wrapper .navbar {
+    .container-wrapper .navbar {
       border : 1px solid transparent ; 
       letter-spacing : 8px ; /* 자간 */
     
