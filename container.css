@@ -87,14 +87,6 @@
       color : red ;
     }
 
-    .press-logo .container-wrapper .navbar .logo-first {
-      color : blue ;
-    }
-
-    .exhibitions-logo .container-wrapper .navbar .logo-first {
-      color : #EC9F53 ;
-    }
-
       
     .container .menu  { /* menu class 안의 직계 a는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
       position : relative ;
@@ -107,20 +99,6 @@
     }
     .container .menu:hover .submenu { /* container class 안의 menu class에 마우스를 올렸을 때(:hover) menu안의 submenu만 선택 */
       display : block ; /* 원래 숨겨진 submenu를 조건부 선택자 :hover와 연결해 보이게 함 */
-    }
-
-
-    .container .sidebar { /* (index.html 제외) sidebar로 인해 wrapper 사용 */
-      text-align : right ;
-      margin : 0 auto ;
-      padding-right : 20% ;
-      padding-bottom : 1% ;
-      color : blue ;
-      /* position : absolute ;
-      top : 10% ;
-      right : 20% ;  
-      text wrapper에 relative 쓰고 이렇게 하면, 문서 흐름에서 제외되어 스크롤 시 navbar 위로 겹치는 문제  
-      -> navbar에 넣고 자체 위치 조정 */
     }
 
 
