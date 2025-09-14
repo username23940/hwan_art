@@ -104,16 +104,9 @@
       position : absolute ; /* 하위 메뉴는 부모메뉴 바로 아래 떨어지므로, 부모인 nav li에 relative로 기준점 지정. absolute로 상대적 위치 선정 */
       top : 100% ;
       left : 0 ;
-      opacity : 0;
-      visibility : hidden ;
-      transform : translateY(10px);
-      transition : opacity 0.3s ease, transform 0.3s ease ;
     }
     .container .menu:hover .submenu { /* container class 안의 menu class에 마우스를 올렸을 때(:hover) menu안의 submenu만 선택 */
       display : block ; /* 원래 숨겨진 submenu를 조건부 선택자 :hover와 연결해 보이게 함 */
-      opacity : 1;
-      visibility : visible ;
-      transform : translateY(0);
     }
 
 
