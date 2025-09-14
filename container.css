@@ -79,14 +79,6 @@
       color : black ;
     } 
     
-    .index-logo .container-wrapper .navbar .logo-first { /* 페이지별 로고 색상. OR js로 url 기준으로 현재 경로를 가져와 색상 적용 가능. 근데
-     js가 script 태그로 html 위쪽에 있으면, DOM이 아직 로드되지 않아 document.querySelector('.logo-first')가 null 일수도. error. 그럴 땐 DOMContentLoaded 사용(
-     (DOM이 완전히 로드된 후 JS 실행되도록) */
-     /* .bodyhome .index로 적으면 안됨. .a .b라는 뜻 자체가 클래스 a를 가진 요소 안에(후손으로) 클래스 b를 가진 요소가 있어야 동작 
-     .a.b는 어떤 요소가 두 클래스를 모두 가지고 있어야 적용. .a > .b는 a의 직계 자식 중 b를 가진 요소 */
-      color : red ;
-    }
-
       
     .container .menu  { /* menu class 안의 직계 a는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
       position : relative ;
@@ -113,6 +105,14 @@
       text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
     }
 
+
+    .index-logo .container-wrapper .navbar .logo-first { /* 페이지별 로고 색상. OR js로 url 기준으로 현재 경로를 가져와 색상 적용 가능. 근데
+     js가 script 태그로 html 위쪽에 있으면, DOM이 아직 로드되지 않아 document.querySelector('.logo-first')가 null 일수도. error. 그럴 땐 DOMContentLoaded 사용(
+     (DOM이 완전히 로드된 후 JS 실행되도록) */
+     /* .bodyhome .index로 적으면 안됨. .a .b라는 뜻 자체가 클래스 a를 가진 요소 안에(후손으로) 클래스 b를 가진 요소가 있어야 동작 
+     .a.b는 어떤 요소가 두 클래스를 모두 가지고 있어야 적용. .a > .b는 a의 직계 자식 중 b를 가진 요소 */
+      color : red ;
+    }
 
     img {
      width : 80% ;
