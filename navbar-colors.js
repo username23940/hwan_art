@@ -1,4 +1,4 @@
-<script>
+
   const logo = document.querySelector('.logo-first');
 
   if (location.pathname.includes('press')) {
@@ -8,4 +8,3 @@
   } else if (location.pathname.includes('index')) {
     logo.style.color = 'red';
   }
-</script>
