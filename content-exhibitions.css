@@ -1,1 +1,16 @@
-
+    .exhibitions-logo .container-wrapper .navbar .logo-first {
+      color : #EC9F53 ;
+    }
+  
+    .exhibitions .sidebar { /* (index.html 제외) sidebar로 인해 wrapper 사용 */
+      text-align : right ;
+      margin : 0 auto ;
+      padding-right : 20% ;
+      padding-bottom : 1% ;
+      color : blue ;
+      /* position : absolute ;
+      top : 10% ;
+      right : 20% ;  
+      text wrapper에 relative 쓰고 이렇게 하면, 문서 흐름에서 제외되어 스크롤 시 navbar 위로 겹치는 문제  
+      -> navbar에 넣고 자체 위치 조정 */
+    }
