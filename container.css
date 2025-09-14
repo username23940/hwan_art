@@ -32,7 +32,9 @@
     */
     /* 따라서 모든 href와 src는 무조건 " (큰따옴표)로 통일하는 걸 추천해. 이러면 꼬일 확률이 거의 0이야. 그런데도 문제가 생긴다?
     절대 그럴 일 없음. 태그 닫힘, 주석 확인 필!! (F12로 a 태그 직접 확인해보기. 에디터에서 href="..." 따옴표가 진짜 ASCII " (0x22)인지 확인.) */
-      
+
+
+
     .bodyhome { /* 전체 중앙정렬 */
       margin : 0 ;
       padding-top : 127.875px ;   /* fixed 유지하고, container에 flex를 제외 just 박스로 쓰고 wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 
@@ -76,12 +78,21 @@
     .container-wrapper .navbar a {
       color : black ;
     } 
-    .container-wrapper .navbar .logo-first {
-      color : blue ;
-    } 
     
+    .bodyhome .index .container-wrapper .navbar .logo-first { /* 페이지별 로고 색상 */
+      color : red ;
+    }
+
+    .bodyhome .press .container-wrapper .navbar .logo-first {
+      color : blue ;
+    }
+
+    .bodyhome .exhibitions .container-wrapper .navbar .logo-first {
+      color : #EC9F53
+    }
+
       
-    .container .menu  { /* menu class 안 직계 a는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
+    .container .menu  { /* menu class 안의 직계 a는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
       position : relative ;
     }
     .container .submenu {
