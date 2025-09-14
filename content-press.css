@@ -43,7 +43,6 @@
       font-size : smaller ;
     }
     .text-wrapper .exclude .exclude-wrapper a {
-      text-decoration-line : none ;
       color : blue ;
     }
         
@@ -67,7 +66,6 @@
     }
     .main-wrapper .description {
       font-size : small ;
-      text-decoration-line : none ;
       color : inherit ; /* 부모(.main) 색상(blue) 상속 */
     }  
     .main-wrapper .info {
