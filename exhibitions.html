@@ -1,23 +1,185 @@
-<!DOCTYPE html>
-<html>
-<head>
+  <!DOCTYPE html>
+  <html>
+  <head> 
     <meta charset="UTF-8">
     <title>Exhibitions</title>
+    <style>
+    /* flex, grid는 언제 쓰는가? 
+    flex : 한줄 정렬 최적화(가로, 세로 한 방향으로). 아이템 크기가 유동적일 떄 자동 정렬하기 좋음
+    grid : 2차원 레이아웃 최적화(행, 열 구조 필요시). 큰 레이아웃을 잡을 때, 공간 분할에 강함.(페이지, 섹션의 틀)
+    보통 바깥쪽 큰 레이아웃 : grid. 안쪽 세부 정렬 : flex 
+    */
+    /* position의 relative와 absolute 속성값. relative는 요소를 원래 자리에서 상대적으로 이동. 부모나 다른 요소에 영향 없이
+      자신의 위침나 이동. 이동 안하면 원래 자리 그대로. 다른 요소들은 relative가 원래 자리 차지한다고 생각해서 문서 흐름 깨지 X
+      absolute는 요소를 문서 흐름에서 제거, 가장 가까운 position 중 relative, absolute, fixed인 부모를 기준으로(기준점) 그 안에서 배치. */
+    /* align 관련 css 속성 
+    text-align : 인라인 요소 텍스트(블록 요소 자체는 영향 X, 내부 콘텐츠만 정렬)
+    align-tiems : flex, grid container 안의 자식들을 정렬.
+    align-self : flex, grid container 내부의 아이템. align-items를 덮어쓰고 특정 아이템만 개별 정렬.
+    justify-content  flex, grid container 안의 자식들을 정렬 
+    place-items : grid container에서 align-items와 justify-items를 동시에 */
+    /*
+    @media(max-width : 768px) {  모바일 화면 디자인 
+      body{
+        padding-top : 274.875px ;
+      }
+      .container-wrapper{
+        flex-direction : column ;
+        align-items : center ;
+        gap: 10px ;
+        margin : 0;
+      }
+      .container-wrapper ul {
+        flex-direction : column ;
+        padding-left: 0px ;
+        gap : 10px ;
+      }
+    }
+    */
+      
+    .bodyhome { /* 전체 중앙정렬 */
+      margin : 0 ;
+      padding-top : 127.875px ;   /* fixed 유지하고, container에 flex를 제외 just 박스로 쓰고 wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 
+      OR container 추가하며 fixed를 sticky로 레이아웃 흐름에 포함. 패딩 필요 없음 */
+    }
+  
+    .container-wrapper { /* 로고와 메뉴 사이 가로 정렬 */ 
+      display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
+      align-items: center;
+      justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
+      그래서 이때는 gap 필요 없음(어차피 양끝으로 밀고 가운데가 전부 간격) -> 해보니까 강제로 양끝으로 가서 
+      확대축소시 안예쁨.         
+      
+      또한 양끝으로 가서 좌우 패딩을 주면, 패딩은 컨테이너 안쪽 공간이기 때문에 실제 flex 공간이
+      줄어들어, 이 줄어든 영역안에서 중앙에 오기 때문에 살짝 오른쪽으로 치우친 느낌 
+      
+      space around, evenly는 각각 아이템 사이 간격이 같고 양끝 간격은 그 절반 & 아이템 사이와 양끝간격 동일 */
+    
+      padding-top : 20px ; /* 위에서 조금 띄우기. padding 사용 시 배경색이 패딩까지 적용. 마진은 절대 적용 X.. BUT 스크롤 고려시 padding이 나음 */
+      padding-bottom : 20px ; /* 사진과의 간격 만들기(어차피 position fixed라 body에서 padding 주지만, margin-top과의 통일성 고려 */
+      /* gap : 20px로고와 메뉴 사이 간격. 고정된 gap OR
+      gap: 2vw (화면 너비의 2%)  OR  gap :  clamp(20px, 2vw, 100px). 유연하게 변하는 gap
+      (margin과 달리 아이템 사이에만 간격 주고, 바깥쪽에는 안줌 */
+      gap : clamp(20px, 10vw, 1000px) ;
+      
+     background: #f4f4f4; /* logo임을 배경색으로 연하게 구분.  */
+      position: fixed; /* fixed : 스크롤 해도 상단 고정(고정 메뉴바 느낌). 없으면 스크롤 할 때 컨테이너도 위로 사라짐 
+        그러나 그 요소를 레이아웃 흐름에서 제거하므로, 밑의 요소들이 logo를 인식하지 못하고 겹치기 때문에, 높이만큼
+        body에 컨테이너 크기만큼 패딩부여 필요
+        sticky는 부모 흐름을 유지하면서 스크롤 시 유지 X (fixed 일 경우 container안에서 container-wrapper는 빠지니까 요소 1개로 인식) */ 
+      top :0 ; left:0; /* fixed일 때 시작 좌표를 고정하지 않으면 레이아웃 흐름으로 인식함. sticky는 필요 없음 */
+      width : 100%; /* 부모 기준 가로 전체를 채우겠다는 뜻. 50%면 가로 전체의 왼쪽 절반을 채움(왼쪽 부분 잘림). 
+      fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
+    }
+    .logo {
+      border : 1px solid transparent ;
+    }
+    .container-wrapper h1 {
+      letter-spacing : 8px ; /* 자간 */
+    }
+    .container-wrapper .logo a {
+      text-decoration-line : none ;
+      color : black ;
+    } 
+    .container-wrapper h1 .logo-first {
+      color : blue ;
+    } 
+      
+      
+    .container .menu  { /* menu class 안 직계 a는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
+      position : relative ;
+  
+    }
+    .container .submenu {
+      display : none ; /* 안쓰면 항상 떠있음. hover 시에만 보이려면 기본값이 숨겨져있어야 */
+      position : absolute ; /* 하위 메뉴는 부모메뉴 바로 아래 떨어지므로, 부모인 nav li에 relative로 기준점 지정. absolute로 상대적 위치 선정 */
+      top : 100% ;
+      left : 0 ;
+    }
+    .container .menu:hover .submenu { /* container class 안의 menu class에 마우스를 올렸을 때(:hover) menu안의 submenu만 선택 */
+      display : block ; /* 원래 숨겨진 submenu를 조건부 선택자 :hover와 연결해 보이게 함*/
+    }
+   
+  
+    ul {
+      list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
+      display : flex ;
+      align-items : center ;
+      justify-content : center ;  
+      gap : clamp(20px, 2vw, 40px) ; /* li 끼리의 간격. 없으면 간격 안띄워짐 */
+    }
+    ul a {
+      text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
+    }
+    
+  
+  </style>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A basic HTML5 template">
     <link rel="stylesheet" href="styles.css">  -->
-</head>
-<body>
-  <h1>Exhibitions</h1>
-
-
+  </head>
+  <body class='bodyhome'>
+  <div class='container'>
+    <div class='container-wrapper'> <!-- sidebar로 인해 wrapper 사용-->
+      <h1 class='logo'><a href='index.html'><span class='logo-first'>QUEUE</span>STACK</a></h1>
+      <ul>
+        <li class='menu'>
+          <a style='color : blue' href='press-current.html'>Press</a>
+          <ul class='submenu'>
+            <li><a href ='press-current.html' style='color :blue'>Current</a></li>
+            <li><a href ='press-past.html' style='color :blue'>Past</a></li>
+          </ul>
+        </li> 
+        <li><a style='color : #EC9F53' href='exhibitions.html'>Exhibitions</a></li>
+        <li class='menu'>
+          <a style='color : #EC9F53' href=exhibitions-current.html'>Press</a>
+          <ul class='submenu'>
+            <li><a href ='exhibitions-current.html' style='color :#EC9F53'>Current</a></li>
+            <li><a href ='exhibitions-past.html' style='color :#EC9F53'>Past</a></li>
+            <li><a href ='exhibitions-upcoming.html' style='color :#EC9F53'>Upcoming</a></li>              
+          </ul>
+        </li> 
+        <li><a style='color : red' href='works.html'>Works</a></li>
+        <li><a style='color : green' href='columns.html'>Columns</a></li>
+        <li><a style='color : purple' href='about.html'>About</a></li>
+      </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
+    </div>
+    <h2 class='sidebar'>PRESS / ARTICLES</h2>
+  </div>
+    
+  <div class='press'>
+    <div class ='img-wrapper'>
+      <img src="https://images.unsplash.com/photo-1756680967517-18c125f4d092?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <p class='caption'>Hwan Kim, Some discribe for image(2025)</p>
+    </div>
+    <div class='text-wrapper'> 
+      <div class='exclude'>
+        <h1 style='margin:0; font-size : 2em'>ARTICLES</h1>
+        <div class='exclude-wrapper'>
+          <a href='press-current.html'>CURRENT</a>
+          <a href='press-past.html'>PAST</a>
+        </div>
+      </div>
+      <div class='main'>
+        <h3>2025</h3>
+        <div class='main-wrapper'>
+          <p class='subject'>David Someone at North Korea Gallery, PyeongYang</p>
+          <a class='description' href ='https://www.theartnewspaper.com/2025/09/02/serpentine-galleries-announces-its-first-ever-hockney-exhibition'>Gallery in North its First-ever David's Exhibition</a>
+          <p class='info'>Gareth Harris / The Art News / 2 September 2025</p>
+          <a class='description' href='https://www.bing.com/search?pglt=129&q=css+a+tag+remove+color&cvid=6c258686030248ae95317349d5706a52&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQg4NzI3ajBqMagCALACAA&FORM=ANNTA1&PC=U531'>David Hockneys 90-metre Normandy nature frieze to be shown in London</a>
+          <p class='info'>Harriet Sherwood / The Guardian / 31 August 2025</p>
+          <hr> <!-- border 사용하기에는 info 가 2개 이상 나올 때마다 subject로 구분선이 생기므로 불가능(info class에 
+          border 부여시 이상한데 구분선 남발. if) flex, grid 아이템 사이라면 gap+선이 좋음. li+li 선택자는 첫번째
+          아이템만 제외하고 선이 들어가서 깔끔. -->
+          <p class='subject'>LIM JANGBIN 25 at Fondatino Goyang-si, Il-san</p>
+          <a class='description' href='https://blog.naver.com/PostView.nhn?blogId=staruranus&logNo=221223771336'>LIM JANGBIN is Going Up Garrowby Hill : An artist revisits seasons across a lifetime</a>
+          <p class='info'>Francasis Mouly / The New Yorker / 2 June 2025</p>
+          <a class='description' href='https://www.hockney.com/press'>Who I like is safetyzone.125</a>
+          <p class='info'>Joa ooMiii / Instagram / 24 April 2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  </html>
   
-  <!-- <main>
-      <p>This is a basic HTML structure.</p>
-  </main>
-  <footer>
-      <p>&copy; 2025 Your Name</p>
-  </footer>
-  <script src="script.js"></script> <!-- Optional: Link to external JavaScript --> -->
-</body>
-</html>
