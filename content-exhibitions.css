@@ -18,3 +18,28 @@
         color : inherit ;
         text-decoration : none ;
     }
+
+    .exhibitions {
+      display : grid ;
+      grid-template-rows : 1fr 1fr 1fr ; /* 그리드를 첫, 두번째 요소가 균등 분배 */ 
+      padding : 0 20% ; /* 페이지별 로고 색상으로 인해 .press의 padding 변경 */
+      gap : 5% ;
+    }
+
+    .wrapper {
+      align-self : center ;
+    }
+        
+    .img-wrapper img {
+      width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
+      /* z-index : 1 ; img-wrapper보다 항상 위에서 노출 */
+      /* padding : 5% ;  %로 해야 반응형 
+      background: #87CEEB -> wrapper 대용 */
+    }
+    .img-wrapper .caption {
+        margin-top : 10px ;
+        font-size : 1rem ;
+        font-style : italic ;
+    }
+ 
+  
