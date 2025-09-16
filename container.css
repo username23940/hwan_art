@@ -112,7 +112,7 @@
      (DOM이 완전히 로드된 후 JS 실행되도록) */
      /* .bodyhome .index로 적으면 안됨. .a .b라는 뜻 자체가 클래스 a를 가진 요소 안에(후손으로) 클래스 b를 가진 요소가 있어야 동작 
      .a.b는 어떤 요소가 두 클래스를 모두 가지고 있어야 적용. .a > .b는 a의 직계 자식 중 b를 가진 요소 */
-      color : red ;
+      color : #9E2A2A ;
     }
 
     img {
@@ -120,17 +120,18 @@
      max-width : 800px ;
      display : block ; 
      margin : 0 auto ; /* block으로 바꾸고 좌우 자동 설정. OR img는 인라인 요소라서 부모에 text-align : center ; */
-     border-bottom : 10px solid red ;
     }
     #index-caption {
-        margin-top : 10px ;
+        margin : 10px ;
         font-size : small ; 
         text-align : center ;
     }
-
     #index-hr {
       border : none ;
-      border-top : 10px solid red ; 
+      border-top : 10px solid #9E2A2A ; 
       width : 80% ;
+      max-width : 1100px ;
       margin-top : 60px ; /* border 자체가 padding을 덮는 box이므로 margin 써야함 */
+      margin-left : auto ;
+      margin-right : auto ;
     }
