@@ -16,7 +16,6 @@
     .container .sidebar a { /* sidebar 내의 a 태그들이 원래 인라인 스타일 없으면 부모 상속, but 브라우저 기본 스타일에 의해
         상속이 무시될 수 있으니 명시! like container.css 의 a 태그 */
         color : black ;
-        text-decoration : none ;
     }
     .container .sidebar a:hover {
         color : inherit ;
