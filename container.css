@@ -38,7 +38,7 @@
     .bodyhome { /* 전체 중앙정렬 */
       margin : 0 ;
       padding-bottom : 200px ;
-      padding-top : 127.875px ;   /* fixed 유지하고, container에 flex를 제외 just 박스로 쓰고 wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 
+      padding-top : 187.875px ;   /* fixed 유지하고, container에 flex를 제외 just 박스로 쓰고 wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 
       OR container 추가하며 fixed를 sticky로 레이아웃 흐름에 포함. 패딩 필요 없음 */
     }
   
@@ -54,7 +54,7 @@
       
       space around, evenly는 각각 아이템 사이 간격이 같고 양끝 간격은 그 절반 & 아이템 사이와 양끝간격 동일 */
     
-      padding-top : 20px ; /* 위에서 조금 띄우기. padding 사용 시 배경색이 패딩까지 적용. 마진은 절대 적용 X.. BUT 스크롤 고려시 padding이 나음 */
+      padding-top : 80px ; /* 위에서 조금 띄우기. padding 사용 시 배경색이 패딩까지 적용. 마진은 절대 적용 X.. BUT 스크롤 고려시 padding이 나음 */
       padding-bottom : 20px ; /* 사진과의 간격 만들기(어차피 position fixed라 body에서 padding 주지만, margin-top과의 통일성 고려 */
       /* gap : 20px로고와 메뉴 사이 간격. 고정된 gap OR
       gap: 2vw (화면 너비의 2%)  OR  gap :  clamp(20px, 2vw, 100px). 유연하게 변하는 gap
