@@ -40,8 +40,11 @@
     }
     .img-wrapper .caption {
         margin-top : 10px ;
-        font-size : 1rem ;
-        font-style : italic ;
+        font-size : small ;
+    }
+
+    .text-wrapper {
+        font-size : small ;
     }
  
   
