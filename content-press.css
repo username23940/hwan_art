@@ -31,7 +31,7 @@
       padding-top: 7% ;
     }
     .img-wrapper img {
-      width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
+      width : 60% ; /* grid의 첫번째 요소 너비의 80% 사용 */
       /* z-index : 1 ; img-wrapper보다 항상 위에서 노출 */
       /* padding : 5% ;  %로 해야 반응형 
       background: #87CEEB -> wrapper 대용 */
