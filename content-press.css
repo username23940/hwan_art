@@ -37,10 +37,9 @@
       background: #87CEEB -> wrapper 대용 */
     }
     .img-wrapper .caption {
-        margin-top : 10px ;
-        font-size : 1rem ;
-        font-style : italic ;
-    }
+        font-size : small ;
+        text-align : center ;
+    }   
 
          
     .press .text-wrapper { /* text-wrapper의 위치 문제 : h1, h2를 포함 안시키면 text wrapper까지 이것들 전부를 grid로 인식
