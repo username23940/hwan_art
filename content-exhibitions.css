@@ -27,14 +27,13 @@
     }
 
     .wrapper {
-      align-items : center ;
-      justify-items : center ;
       display : grid ;
       grid-template-columns : 1fr 1fr ;
     }
 
     .img-wrapper {
-        
+       align-items : center ;
+      justify-items : center ;
     }
     .img-wrapper img {
       width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
@@ -50,6 +49,8 @@
     }
 
     .text-wrapper {
+        align-items : center ;
+        justify-items : center ;    
         font-size : small ;
     }
  
