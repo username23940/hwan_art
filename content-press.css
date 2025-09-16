@@ -51,7 +51,7 @@
       grid-template-rows : auto 1fr ; /* exclude, main만 존재하므로(고정시킬거, 본문) 세로 정렬. 본문은 고정시킬거가 다 들어간 후 남는자리에 들어가게 */
       color : blue ;
     }  
-    .text-wrapper .exclude h2 {
+    .text-wrapper .exclude h2 { /* display : inline하면 글씨 길이만큼 박스 */
       border-bottom : solid blue 3px ;
     }
     .text-wrapper .exclude .exclude-wrapper {
