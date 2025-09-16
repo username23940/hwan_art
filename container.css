@@ -120,9 +120,10 @@
      max-width : 800px ;
      display : block ; 
      margin : 0 auto ; /* block으로 바꾸고 좌우 자동 설정. OR img는 인라인 요소라서 부모에 text-align : center ; */
+     margin-bottom : 10px ;
     }
     .bottom-caption {
-        margin : 10px ;
+        margin : 5px ;
         font-size : small ; 
         text-align : center ;
     }
@@ -134,4 +135,5 @@
       margin-top : 60px ; /* border 자체가 padding을 덮는 box이므로 margin 써야함 */
       margin-left : auto ;
       margin-right : auto ;
+      margin-bottom : 0 ;
     }
