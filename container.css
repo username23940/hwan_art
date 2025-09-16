@@ -131,4 +131,5 @@
       border : none ;
       border-top : 10px solid red ; 
       width : 80% ;
+      margin-top : 60px ; /* border 자체가 padding을 덮는 box이므로 margin 써야함 */
     }
