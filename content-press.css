@@ -3,7 +3,7 @@
          }
 
      .container .sidebar { /* (index.html 제외) sidebar로 인해 wrapper 사용 */
-      text-align : right ;
+      text-align : right ; 
       margin : 0 0 ;
       padding-right : 20% ;
       padding-bottom : 1% ;
