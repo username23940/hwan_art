@@ -126,10 +126,9 @@
         font-size : small ; 
         text-align : center ;
     }
-    #line {
-     border : none ;
-     height : 4px ;
-     bakcground-color : red ;
-     width : 100% ;
-     margin : 20% 0 ;
+
+    hr {
+      border : none ;
+      border-top : 10px solid red ; 
+      width : 80% ;
     }
