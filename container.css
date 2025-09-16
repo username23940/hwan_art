@@ -121,9 +121,15 @@
      display : block ; 
      margin : 0 auto ; /* block으로 바꾸고 좌우 자동 설정. OR img는 인라인 요소라서 부모에 text-align : center ; */
     }
-
-
-    .box {
-     border-top : 5px solid red ; 
+    #index-caption {
+        margin-top : 10px ;
+        font-size : small ; 
+        text-align : center ;
     }
-  
+    #line {
+     border : none ;
+     height : 4px ;
+     bakcground-color : red ;
+     width : 100% ;
+     margin : 20% 0 ;
+    }
