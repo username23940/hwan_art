@@ -33,6 +33,8 @@
     .wrapper {
       display : grid ;
       grid-template-columns : 1fr 1fr ;
+      align-items : center ; /* .text-wrapper에서 align-self하면 사진 비율이 가로 나오다가 세로 나올 때, 텍스트가 중앙이더라도 시각적으로 비율이 안맞아보임
+          만약 이미지 중앙에 안맞추고 항상 위쪽 정렬 원한다면 align-items : start ; */
     }
 
     .img-wrapper img {
@@ -48,9 +50,7 @@
     }
 
     .text-wrapper {
-        align-self : center ;
         font-size : small ;
-        padding-bottom : 10% ;
     }
     .text-wrapper .description {
         color : #EC9F53 ; /* 여기서는 inherit 하면 text-wrapper나 그 부모의 색인 검정색 상속 */
