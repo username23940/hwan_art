@@ -1,4 +1,4 @@
- /* flex, grid는 언제 쓰는가? 
+    /* flex, grid는 언제 쓰는가? 
     flex : 한줄 정렬 최적화(가로, 세로 한 방향으로). 아이템 크기가 유동적일 떄 자동 정렬하기 좋음
     grid : 2차원 레이아웃 최적화(행, 열 구조 필요시). 큰 레이아웃을 잡을 때, 공간 분할에 강함.(페이지, 섹션의 틀)
     보통 바깥쪽 큰 레이아웃 : grid. 안쪽 세부 정렬 : flex 
@@ -34,15 +34,15 @@
     절대 그럴 일 없음. 태그 닫힘, 주석 확인 필!! (F12로 a 태그 직접 확인해보기. 에디터에서 href="..." 따옴표가 진짜 ASCII " (0x22)인지 확인.) */
 
 
-
     .bodyhome { /* 전체 중앙정렬 */
       margin : 0 ;
       padding-bottom : 200px ;
       padding-top : 207.875px ;   /* fixed 유지하고, container에 flex를 제외 just 박스로 쓰고 wrapper 그대로, body에 패딩을 부여하고 h2를 패딩 이후로 작성하게 함 
       OR container 추가하며 fixed를 sticky로 레이아웃 흐름에 포함. 패딩 필요 없음 */
     }
-  
-    .container-wrapper { /* 로고와 메뉴 사이 가로 정렬 */ 
+
+
+    .container-wrapper { /* 로고와 메뉴 사이 가로 정렬. index 페이지에는 없는 sidebar로 인해 wrapper 사용. 다른 페이지에도 navbar가 들어갈 때 wrapper가 들어가니, 여기도 어쩔 수 없이 추가 */  
       display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
       align-items: center;
       justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
@@ -71,10 +71,17 @@
       fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
     }
 
+
     .container-wrapper .navbar {
       border : 1px solid transparent ; 
       letter-spacing : 8px ; /* 자간 */
-    
+    }
+    .index-logo .container-wrapper .navbar .logo-first { /* 페이지별 로고 색상. OR js로 url 기준으로 현재 경로를 가져와 색상 적용 가능. 근데
+     js가 script 태그로 html 위쪽에 있으면, DOM이 아직 로드되지 않아 document.querySelector('.logo-first')가 null 일수도. error. 그럴 땐 DOMContentLoaded 사용(
+     (DOM이 완전히 로드된 후 JS 실행되도록) */
+     /* class=bodyhome index일 때, .bodyhome .index로 적으면 안됨. .a .b라는 뜻 자체가 클래스 a를 가진 요소 안에(후손으로) 클래스 b를 가진 요소가 있어야 동작 
+     .a.b는 어떤 요소가 두 클래스를 모두 가지고 있어야 적용. .a > .b는 a의 직계 자식 중 b를 가진 요소 */
+      color : #9E2A2A ;
     }
     .container-wrapper .navbar .logo-second {
       color : black ;
@@ -106,14 +113,6 @@
       text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
     }
 
-
-    .index-logo .navbar .logo-first { /* 페이지별 로고 색상. OR js로 url 기준으로 현재 경로를 가져와 색상 적용 가능. 근데
-     js가 script 태그로 html 위쪽에 있으면, DOM이 아직 로드되지 않아 document.querySelector('.logo-first')가 null 일수도. error. 그럴 땐 DOMContentLoaded 사용(
-     (DOM이 완전히 로드된 후 JS 실행되도록) */
-     /* .bodyhome .index로 적으면 안됨. .a .b라는 뜻 자체가 클래스 a를 가진 요소 안에(후손으로) 클래스 b를 가진 요소가 있어야 동작 
-     .a.b는 어떤 요소가 두 클래스를 모두 가지고 있어야 적용. .a > .b는 a의 직계 자식 중 b를 가진 요소 */
-      color : #9E2A2A ;
-    }
 
     img {
      width : 80% ;
