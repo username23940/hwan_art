@@ -121,10 +121,9 @@
      margin : 0 auto ; /* block으로 바꾸고 좌우 자동 설정. OR img는 인라인 요소라서 부모에 text-align : center ; */
      margin-bottom : 10px ;
     }
-    .bottom-caption {
-        margin : 5px ;
-        font-size : small ; 
-        text-align : center ;
+    .caption { /* index 페이지를 제외한 페이지와 달리 img-wrapper에 싸여있지 않으므로 별도 생성 */
+      font-size : small ; 
+      text-align : center ;
     }
     #index-hr {
       border : none ;
