@@ -42,7 +42,7 @@
       OR container 추가하며 fixed를 sticky로 레이아웃 흐름에 포함. 패딩 필요 없음 */
     }
   
-    .container { /* 로고와 메뉴 사이 가로 정렬 */ 
+    .container-wrapper { /* 로고와 메뉴 사이 가로 정렬 */ 
       display: flex; /* flex 컨테이너가 됨. 자식은 flex 아이템. 기본적으로 가로 방향 배치 */ 
       align-items: center;
       justify-content: center ; /* spacebetween 하면 시작은 왼쪽, 끝은 오른쪽. 사이는 균등배분. 
@@ -71,12 +71,12 @@
       fixed가 들어가면 레이아웃 흐름에서 제거되므로 자동으로 부모 너비를 채우지 않아 꼭 지정해야함(안그러면 0,0에 붙음) */
     }
 
-    .container .navbar {
+    .container-wrapper .navbar {
       border : 1px solid transparent ; 
       letter-spacing : 8px ; /* 자간 */
     
     }
-    .container .navbar .logo-second {
+    .container-wrapper .navbar .logo-second {
       color : black ;
     } 
     
