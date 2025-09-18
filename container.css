@@ -112,7 +112,10 @@
       text-decoration-line : none ;  /* 링크들의 밑줄 제거. li 태그에 쓰면 안되고, 실제 밑줄이 있는 요소에 적용해야 함 */
     }
 
-
+    .img-wrapper {
+        background : gray ;
+        
+    }
     img {
      width : 80% ;
      max-width : 800px ;
