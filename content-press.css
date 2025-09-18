@@ -21,7 +21,7 @@
       display : grid ;
       grid-template-columns : 1fr 1fr ; /* 그리드를 첫, 두번째 요소가 균등 분배 */ 
       padding : 0 20% ; /* 페이지별 로고 색상으로 인해 .press의 padding 변경 */
-      gap : 5% ;
+      gap : 15xx ;
     }
     .img-wrapper { /* img의 패딩 말고, img의 칸 전체에 배경색 or 다른 기능(가운데, 상단 정렬, 캡션, 버튼)을 적용할 수 있음 */
       background: #87CEEB;
@@ -44,7 +44,7 @@
          
     .press .text-wrapper { /* text-wrapper의 위치 문제 : h1, h2를 포함 안시키면 text wrapper까지 이것들 전부를 grid로 인식
         h1, h2 포함시키면 H1, H2, main이 전부다 .press grid의 오른쪽 칸에 구겨들어감 */
-      background : #ADD8E6 ;
+      background : #f0f0f0 ;
       padding : 30px ;
       display : grid ;
       grid-template-rows : auto 1fr ; /* exclude, main만 존재하므로(고정시킬거, 본문) 세로 정렬. 본문은 고정시킬거가 다 들어간 후 남는자리에 들어가게 */
