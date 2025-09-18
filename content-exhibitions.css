@@ -25,9 +25,11 @@
 
     .exhibitions {
       display : grid ;
-      grid-template-rows : 1fr 1fr 1fr ; /* 그리드를 첫, 두번째 요소가 균등 분배 */ 
+      grid-auto-rows : auto ; /* grid template rows 1fr 1fr 1fr를 하면 모든 row가 3분의 1이라는 같은 비율로 짤림.
+        세번째 wrapper가 더 길면 공간 차지 못하고 짤리므로, auto로 하면 내용에 맞게 늘어나고, wrapper 개수에 따라 동적으로 행 생성됨 */ 
       padding : 1% 20% ; /* 페이지별 로고 색상으로 인해 .press의 padding 변경 */
       gap : 5% ;
+      background : #f0f0f0 ;
     }
 
     .wrapper {
