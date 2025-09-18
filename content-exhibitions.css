@@ -41,7 +41,7 @@
 
     .exhibitions {
       display : flex ;
-      flex-direction : auto ; /* grid template rows 1fr 1fr 1fr를 하면 모든 row가 3분의 1이라는 같은 비율로 짤림. 한줄 정렬은 flex가 강점 */ 
+      flex-direction : column; /* grid template rows 1fr 1fr 1fr를 하면 모든 row가 3분의 1이라는 같은 비율로 짤림. 한줄 정렬은 flex가 강점 */ 
       padding : 1% 20% ; /* 페이지별 로고 색상으로 인해 .press의 padding 변경 */
       gap : 5% ;
       background : #f0f0f0 ;
