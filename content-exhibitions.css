@@ -31,10 +31,10 @@
       -> navbar에 넣고 자체 위치 조정 */
     }
   
-    .container .sidebar a { /* sidebar 원래 색 주황, 근데 검정으로 기본 지정. hover 시 부모 상속되도록 */
+    .container .sidebar-second a { /* sidebar 원래 색 주황, 근데 검정으로 기본 지정. hover 시 부모 상속되도록 */
         color : black ;
     }
-    .container .sidebar a:hover {
+    .container .sidebar-second a:hover {
         color : inherit ;
         font-weight : bold ;
     }
