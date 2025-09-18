@@ -22,7 +22,7 @@
      .press {
       display : grid ;
       grid-template-columns : 1fr 1fr ; /* 그리드를 첫, 두번째 요소가 균등 분배 */ 
-      padding : 0 20% ; /* 페이지별 로고 색상으로 인해 .press의 padding 변경 */
+      padding : 0 20% ;
       gap : 15px ;
     }
     .img-wrapper { /* img의 패딩 말고, img의 칸 전체에 배경색 or 다른 기능(가운데, 상단 정렬, 캡션, 버튼)을 적용할 수 있음 */
