@@ -90,7 +90,7 @@
     .container .menu  { /* menu class 안의 직계 a는 press. press만 선택. 드롭다운은 보통 > 직계자식선택자가 안전(후손 선택자, 공백 쓰면 중첩 서브메뉴까지 선택될 수도 */
       position : relative ;
     }
-    .container > a {
+    .container .menu > a {
         font-weight : bold ;
         font-size : large ;
     }
