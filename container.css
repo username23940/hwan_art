@@ -91,7 +91,7 @@
       position : relative ;
     }
     .container .menu > a {
-        font-size : large ;
+      font-size : large ;
     }
     .container .submenu {
       display : none ; /* 안쓰면 항상 떠있음. hover 시에만 보이려면 기본값이 숨겨져있어야 */
@@ -109,7 +109,18 @@
       color : black ;
       font-weight : bold ;
     }
-    
+    .index-logo .submenu { /* container.css에서 기본 세팅 후 페이지별 드롭다운 배경 추가 */
+        background-color : skyblue ;
+      }
+    .press-logo .submenu { 
+        background-color : blue ;
+      }
+    .exhibitions-logo .submenu {
+        background-color :  #EC9F53 ;
+      }      
+    .columns-logo .submenu { 
+        background-color : green ;
+      }    
 
     ul {
       list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
