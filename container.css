@@ -103,13 +103,13 @@
       font-size : small ;
     }
     .container .menu:hover > a { /* menu class에 마우스 올렸을 때, 그 링크만 선택(하위 submenu의 링크 선택 안함 */
-        color : black ;
+        color : black !important ; /* navbar의 li 별로 inline 색이 적용되어 있기에 hover 시에 색 추가 적용해도 무시당함. 그래서 최우선 선택자 important 사용(li별로 menu 이름을 나누면 가독성 안좋아짐. 메뉴별로 5개나 작성)*/
     }
     .container .menu:hover .submenu { /* container class 안의 menu class에 마우스를 올렸을 때(:hover) menu안의 submenu만 선택 */
       display : block ; /* 원래 숨겨진 submenu를 조건부 선택자 :hover와 연결해 보이게 함 */
     }
     .container .menu .submenu a:hover {
-      color : black ;
+      color : black !important ;
       font-weight : bold ;
     }
 
