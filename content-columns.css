@@ -48,7 +48,7 @@
         padding : 10% ;
     }
 
-    .columns #index-hr {
+    #index-hr {
       border : none ;
       border-top : 10px solid green ; 
       width : 80% ;
