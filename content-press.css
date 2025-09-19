@@ -66,35 +66,36 @@
     .press .text-wrapper .exclude .exclude-wrapper a:hover { /* sidebar 원래 색 파랑, 근데 검정으로 기본 지정. hover 시 부모 상속되도록 */
       color : blue ;
       font-weight : bold ;
+    }
         
-    .main {
+    .press .main {
       display : grid;
       grid-template-columns : 20% 1fr ;
       gap : 5% ;
       justify-self : center ;
       color : blue ;
     }
-     hr {
+     .press hr {
       border : none ;
       border-top : 1px solid blue ;
       margin : 1em 0;
     }
-    .main h3{
+    .press .main h3{
       justify-self : center ;
     }
-    .main-wrapper .subject {
+    .press .main-wrapper .subject {
       font-size : large ;      
     }
-    .main-wrapper .description {
+    .press .main-wrapper .description {
       font-size : small ;
       color : inherit ; /* 부모(.main) 색상(blue) 상속 */
     }  
-    .main-wrapper .info {
+    .press .main-wrapper .info {
       font-size : small ;
       color : black ;
     }
          
-    .index-hr { /* hr 태그가 이미 존재하므로 혹시 몰라 class로 변경*/
+    .press .index-hr { /* hr 태그가 이미 존재하므로 혹시 몰라 class로 변경*/
       border : none ;
       border-top : 10px solid blue ; 
       width : 80% ;
