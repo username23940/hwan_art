@@ -108,7 +108,7 @@
     .container .menu .submenu a:hover {
       color : black ;
       font-weight : bold ;
-
+    }
 
     ul {
       list-style : none ; /* 불릿 제거(점, 숫자, 로마숫자 등), disc, deciamal, lower-roman */
