@@ -16,10 +16,8 @@
       right : 20% ;  
       text wrapper에 relative 쓰고 이렇게 하면, 문서 흐름에서 제외되어 스크롤 시 navbar 위로 겹치는 문제  
       -> navbar에 넣고 자체 위치 조정 */
-    }
-      .press-logo .submenu { /* container.css에서 기본 세팅 후 페이지별 드롭다운 배경 추가 */
-        background-color : skyblue
       }
+
      
      .press {
       display : grid ;
@@ -44,7 +42,6 @@
         font-size : small ;
         text-align : center ;
     }   
-
          
      .press .text-wrapper { /* text-wrapper의 위치 문제 : h1, h2를 포함 안시키면 text wrapper까지 이것들 전부를 grid로 인식
         h1, h2 포함시키면 H1, H2, main이 전부다 .press grid의 오른쪽 칸에 구겨들어감 */
@@ -70,8 +67,6 @@
     .press .text-wrapper .exclude .exclude-wrapper a:hover { /* sidebar 원래 색 파랑, 근데 검정으로 기본 지정. hover 시 부모 상속되도록 */
       color : blue ;
       font-weight : bold ;
-    }
-         
         
     .press .main {
       display : grid;
@@ -99,7 +94,6 @@
       font-size : small ;
       color : black ;
     }
-
          
     .press .index-hr { /* hr 태그가 이미 존재하므로 혹시 몰라 class로 변경*/
       border : none ;
