@@ -1,5 +1,5 @@
 .columns-logo .container-wrapper .navbar .logo-first {
-      color : #EC9F53 ;
+      color : green ;
     }
   
     .container .sidebar { /* (index.html 제외) sidebar로 인해 wrapper 사용. exhibitions, resources만 sidebar first, second로 나뉨 */
