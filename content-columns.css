@@ -19,10 +19,11 @@
     .wrapper {
       display : grid ;
       grid-template-columns : 1fr 1fr ;
-      align-items : center ; /* .text-wrapper에서 align-self하면 사진 비율이 가로 나오다가 세로 나올 때, 텍스트가 중앙이더라도 시각적으로 비율이 안맞아보임
-          만약 이미지 중앙에 안맞추고 항상 위쪽 정렬 원한다면 align-items : start ; */
+      align-items : strech ; /* .text-wrapper에서 align-self하면 사진 비율이 가로 나오다가 세로 나올 때, 텍스트가 중앙이더라도 시각적으로 비율이 안맞아보임
+          만약 이미지 중앙에 안맞추고 항상 위쪽 정렬 원한다면 align-items : start ; . img-wrapper 사이즈가 더 커서, text-wrapper가 자동 중앙 정렬되는데, 배경의 
+        길이를 맞추고 싶으면 strech로 두 wrapper의 높이 동일하게! */
       padding : 0 20% ;
-      gap : 5% ;
+      gap : 15px ;
     }
 
     .img-wrapper {
@@ -43,6 +44,7 @@
     .text-wrapper {
         font-size : small ;
         background : #DCDCDC ;
+        padding : 20% ;
     }
 
     #index-hr {
