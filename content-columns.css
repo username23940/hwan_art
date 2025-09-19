@@ -2,7 +2,7 @@
       color : green ;
     }
   
-    .container .sidebar { /* (index.html 제외) sidebar로 인해 wrapper 사용. exhibitions, resources만 sidebar first, second로 나뉨 */
+    .columns-logo .sidebar { /* (index.html 제외) sidebar로 인해 wrapper 사용. exhibitions, resources만 sidebar first, second로 나뉨 */
       text-align : right ;
       margin : 0 0 ;
       padding-right : 20% ;
@@ -15,8 +15,11 @@
       text wrapper에 relative 쓰고 이렇게 하면, 문서 흐름에서 제외되어 스크롤 시 navbar 위로 겹치는 문제  
       -> navbar에 넣고 자체 위치 조정 */
     }
+    .columns-logo .submenu { /* container.css에서 기본 세팅 후 페이지별 드롭다운 배경 추가 */
+      background-color : green;
+    }
 
-    .wrapper {
+    .columns .wrapper {
       display : grid ;
       grid-template-columns : 1fr 1fr ;
       align-items : strech ; /* .text-wrapper에서 align-self하면 사진 비율이 가로 나오다가 세로 나올 때, 텍스트가 중앙이더라도 시각적으로 비율이 안맞아보임
@@ -26,28 +29,28 @@
       gap : 15px ;
     }
 
-    .img-wrapper {
+    .columns .img-wrapper {
        background: #80BC00 ;
        padding-top: 7% ;
 
     }
-    .img-wrapper img {
+    .columns .img-wrapper img {
       width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
       /* z-index : 1 ; img-wrapper보다 항상 위에서 노출 */
       /* padding : 5% ;  %로 해야 반응형 */ 
     }
-    .img-wrapper .caption {
+    .columns .img-wrapper .caption {
         font-size : small ; 
         text-align : center ;
     }
 
-    .text-wrapper {
+    .columns .text-wrapper {
         font-size : small ;
         background : #DCDCDC ;
         padding : 10% ;
     }
 
-    #index-hr {
+    .columns #index-hr {
       border : none ;
       border-top : 10px solid green ; 
       width : 80% ;
