@@ -2,7 +2,7 @@
       color : #EC9F53 ;
     }
   
-    .container .sidebar-first { /* (index.html 제외) sidebar로 인해 wrapper 사용. exhibitions, resources만 sidebar first, second로 나뉨 */
+    .exhibitions-logo .sidebar-first { /* (index.html 제외) sidebar로 인해 wrapper 사용. exhibitions, resources만 sidebar first, second로 나뉨 */
       text-align : right ;
       margin : 0 0 ;
       padding-right : 20% ;
@@ -15,7 +15,7 @@
       text wrapper에 relative 쓰고 이렇게 하면, 문서 흐름에서 제외되어 스크롤 시 navbar 위로 겹치는 문제  
       -> navbar에 넣고 자체 위치 조정 */
     }
-    .container .sidebar-second { /* (index.html 제외) sidebar로 인해 wrapper 사용 */
+    .exhibitions-logo .sidebar-second { /* (index.html 제외) sidebar로 인해 wrapper 사용 */
       text-align : right ;
       margin : 0 0 ;
       padding-right : 20% ;
@@ -30,10 +30,10 @@
       -> navbar에 넣고 자체 위치 조정 */
     }
   
-    .container .sidebar-second a { /* sidebar 원래 색 주황, 근데 검정으로 기본 지정. hover 시 부모 상속되도록 */
+    .exhibitions-logo .sidebar-second a { /* sidebar 원래 색 주황, 근데 검정으로 기본 지정. hover 시 부모 상속되도록 */
         color : black ;
     }
-    .container .sidebar-second a:hover {
+    .exhibitions-logo .sidebar-second a:hover {
         color : inherit ;
         font-weight : bold ;
     }
@@ -45,7 +45,7 @@
       background : #DCDCDC ;
     }
 
-    .wrapper {
+    .exhibitions .wrapper {
       display : grid ;
       grid-template-columns : 1fr 1fr ;
       align-items : center ; /* .text-wrapper에서 align-self하면 사진 비율이 가로 나오다가 세로 나올 때, 텍스트가 중앙이더라도 시각적으로 비율이 안맞아보임
@@ -53,26 +53,26 @@
       margin : 3% 0 ; /* exhibitions이 flex인데 wrapper가 그리드인 상태에서 img-wrapper나 text-wrapper가 내용이 크면, 시각적으로 gap이 안보임. 그냥 margin 부여. 상하 5% , 좌우 0 */
     }
 
-    .img-wrapper img {
+    .exhibitions .img-wrapper img {
       width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
       /* z-index : 1 ; img-wrapper보다 항상 위에서 노출 */
       /* padding : 5% ;  %로 해야 반응형 
       background: #87CEEB -> wrapper 대용 */
     }
-    .img-wrapper .caption {
+    .exhibitions .img-wrapper .caption {
         font-size : small ; 
         text-align : center ;
     }
 
-    .text-wrapper {
+    .exhibitions .text-wrapper {
         font-size : small ;
     }
-    .text-wrapper .description {
+    .exhibitions .text-wrapper .description {
         color : #EC9F53 ; /* 여기서는 inherit 하면 text-wrapper나 그 부모의 색인 검정색 상속 */
     }  
 
         
-    #index-hr {
+    .exhibitions #index-hr {
       border : none ;
       border-top : 10px solid #EC9F53 ; 
       width : 100% ;
