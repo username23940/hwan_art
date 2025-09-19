@@ -10,7 +10,7 @@
   <body class="bodyhome"> <!--페이지별 로고 색상을 위해 여기에 index 붙이면, 다른 페이지의 .press .exhibitions 등이
     .bodyhome에 붙인 index, press, exhibitions 등을 override 함 = 여러 css 파일을 로드할 때 
     .bodyhome에 붙인게 먼저 로드, 다른 페이지의 .press .exhibitions가 나중에 로드 되기 때문-->
-    <div class="container index-logo">
+    <div class="container columns-logo">
       <div class="container-wrapper"> <!-- index 페이지에는 없는 sidebar로 인해 wrapper 사용. 다른 페이지에도 navbar가 들어갈 때 wrapper가 들어가니, 여기도 어쩔 수 없이 추가-->
         <h1 class="navbar"><a href="index.html"><span class="logo-first">QUEUE</span><span class="logo-second">STACK</span></a></h1>
         <ul>
@@ -30,7 +30,15 @@
             </ul>
           </li>
           <li class="menu"><a style="color : #9E2A2A" href="works.html">Works</a></li>
-          <li class="menu"><a style="color : green" href="columns.html">Columns</a></li>
+          <li class="menu">
+            <a style="color : green" href="columns.html">Columns</a>
+            <ul class="submenu">
+              <li><a href="">The Thinkpad</a></li>
+              <li><a href="">What I wanted to be</a></li>
+              <li><a href="">How to pioneer my future</a></li>
+              <li><a href="">If you want to be a artist</a></li>
+            </ul>
+          </li>
           <li class="menu"><a style="color : purple" href="about.html">About</a></li>
         </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
       </div>
@@ -44,13 +52,13 @@
           <p class="caption">Invented Man Revealing Still Life, 2024 oil on canvas</p>
         </div>
         <div class="text-wrapper">
-          <span class="description">This website represents an overview of Hwan Kim's work from the early 2000's to the present day. It is organized by categories with sub-menus for each discipline.
-          Although not exhaustive it is thorough and you can find current and past events, exhibitions, biographic and reference data.</span><br><br>
-          COLUMNS<br><br>
-          <a>The Thinkpad</a>
-          <a>What I wanted to be</a>
-          <a>How to pioneer my future</a>
-          <a>If you want to be a artist</a>
+          This website represents an overview of Hwan Kim's work from the early 2000's to the present day. It is organized by categories with sub-menus for each discipline.
+          Although not exhaustive it is thorough and you can find current and past events, exhibitions, biographic and reference data.<br><br>
+          COLUMNS<br>
+          <div><a href="" style="color : green ; ">The Thinkpad</a></div>
+          <div><a href="" style="color : green ; ">What I wanted to be</a></div>
+          <div><a href="" style="color : green ; ">How to pioneer my future</a></div>
+          <div><a href="" style="color : green ; ">If you want to be a artist</a></div>
         </div>
       </div>
     </div>
