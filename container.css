@@ -102,7 +102,7 @@
       padding-right : 40px ; /* submenu 미관상 우측 여백 필요 */
       font-size : small ;
     }
-    .container .menu:hover menu > a {
+    .container .menu:hover > a { /* menu class에 마우스 올렸을 때, 그 링크만 선택(하위 submenu의 링크 선택 안함 */
         color : black ;
     }
     .container .menu:hover .submenu { /* container class 안의 menu class에 마우스를 올렸을 때(:hover) menu안의 submenu만 선택 */
