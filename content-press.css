@@ -99,7 +99,7 @@
     }
 
          
-    #index-hr {
+    .index-hr { /* hr 태그가 이미 존재하므로 혹시 몰라 class로 변경*/
       border : none ;
       border-top : 10px solid blue ; 
       width : 80% ;
