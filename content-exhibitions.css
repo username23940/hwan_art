@@ -71,7 +71,7 @@
         color : #EC9F53 ; /* 여기서는 inherit 하면 text-wrapper나 그 부모의 색인 검정색 상속 */
     }  
         
-    .exhibitions #index-hr {
+    #index-hr {
       border : none ;
       border-top : 10px solid #EC9F53 ; 
       width : 100% ;
