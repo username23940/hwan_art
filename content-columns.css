@@ -7,7 +7,7 @@
       margin : 0 0 ;
       padding-right : 20% ;
       padding-bottom : 1% ;
-      color : #EC9F53 ;
+      color : green ;
       font-weight : lighter ;
       /* position : absolute ;
       top : 10% ;
@@ -28,8 +28,7 @@
     .columns {
       display : flex ;
       flex-direction : column; /* grid template rows 1fr 1fr 1fr를 하면 모든 row가 3분의 1이라는 같은 비율로 짤림. 한줄 정렬은 flex가 강점 */ 
-      margin : 1% 20% ; /* background 크기 제한을 위해 margin으로 변경 */
-      background : #f0f0f0 ;
+      padding : 1% 20% ;
     }
 
     .wrapper {
@@ -37,14 +36,19 @@
       grid-template-columns : 1fr 1fr ;
       align-items : center ; /* .text-wrapper에서 align-self하면 사진 비율이 가로 나오다가 세로 나올 때, 텍스트가 중앙이더라도 시각적으로 비율이 안맞아보임
           만약 이미지 중앙에 안맞추고 항상 위쪽 정렬 원한다면 align-items : start ; */
-      margin : 3% 0 ; /* exhibitions이 flex인데 wrapper가 그리드인 상태에서 img-wrapper나 text-wrapper가 내용이 크면, 시각적으로 gap이 안보임. 그냥 margin 부여. 상하 5% , 좌우 0 */
+      padding : 0 20% ;
+      gap : 5% ;
     }
 
+    .img-wrapper {
+       background: #80BC00 ;
+       padding-top: 7% ;
+
+    }
     .img-wrapper img {
       width : 80% ; /* grid의 첫번째 요소 너비의 80% 사용 */
       /* z-index : 1 ; img-wrapper보다 항상 위에서 노출 */
       /* padding : 5% ;  %로 해야 반응형 
-      background: #87CEEB -> wrapper 대용 */
     }
     .img-wrapper .caption {
         font-size : small ; 
