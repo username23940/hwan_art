@@ -1,4 +1,4 @@
-.columns-logo .container-wrapper .navbar .logo-first {
+    .columns-logo .container-wrapper .navbar .logo-first {
       color : green ;
     }
   
@@ -15,16 +15,6 @@
       text wrapper에 relative 쓰고 이렇게 하면, 문서 흐름에서 제외되어 스크롤 시 navbar 위로 겹치는 문제  
       -> navbar에 넣고 자체 위치 조정 */
     }
-
-  
-    .container .sidebar-second a { /* sidebar 원래 색 주황, 근데 검정으로 기본 지정. hover 시 부모 상속되도록 */
-        color : black ;
-    }
-    .container .sidebar-second a:hover {
-        color : inherit ;
-        font-weight : bold ;
-    }
- 
 
     .wrapper {
       display : grid ;
