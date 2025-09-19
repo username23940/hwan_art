@@ -67,29 +67,29 @@
       color : blue ;
       font-weight : bold ;
         
-    .press .main {
+    .main {
       display : grid;
       grid-template-columns : 20% 1fr ;
       gap : 5% ;
       justify-self : center ;
       color : blue ;
     }
-    .press hr {
+     hr {
       border : none ;
       border-top : 1px solid blue ;
       margin : 1em 0;
     }
-    .press .main h3{
+    .main h3{
       justify-self : center ;
     }
-    .press .main-wrapper .subject {
+    .main-wrapper .subject {
       font-size : large ;      
     }
-    .press .main-wrapper .description {
+    .main-wrapper .description {
       font-size : small ;
       color : inherit ; /* 부모(.main) 색상(blue) 상속 */
     }  
-    .press .main-wrapper .info {
+    .main-wrapper .info {
       font-size : small ;
       color : black ;
     }
