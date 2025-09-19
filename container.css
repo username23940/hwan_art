@@ -102,6 +102,9 @@
       padding-right : 40px ; /* submenu 미관상 우측 여백 필요 */
       font-size : small ;
     }
+    .container .menu:hover {
+        color : black ;
+    }
     .container .menu:hover .submenu { /* container class 안의 menu class에 마우스를 올렸을 때(:hover) menu안의 submenu만 선택 */
       display : block ; /* 원래 숨겨진 submenu를 조건부 선택자 :hover와 연결해 보이게 함 */
     }
