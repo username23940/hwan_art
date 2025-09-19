@@ -1,23 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Columns</title>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A basic HTML5 template">
-    <link rel="stylesheet" href="styles.css">  -->
-</head>
-<body>
-  <h1>Columns</h1>
-
-
+  <head> 
+    <title>Hwan Kim</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="container.css"> 
+    <link rel="stylesheet" href="content-columns.css"> 
+  </head>
   
-  <!-- <main>
-      <p>This is a basic HTML structure.</p>
-  </main>
-  <footer>
-      <p>&copy; 2025 Your Name</p>
-  </footer>
-  <script src="script.js"></script> <!-- Optional: Link to external JavaScript --> -->
-</body>
+  <body class="bodyhome"> <!--페이지별 로고 색상을 위해 여기에 index 붙이면, 다른 페이지의 .press .exhibitions 등이
+    .bodyhome에 붙인 index, press, exhibitions 등을 override 함 = 여러 css 파일을 로드할 때 
+    .bodyhome에 붙인게 먼저 로드, 다른 페이지의 .press .exhibitions가 나중에 로드 되기 때문-->
+    <div class="container index-logo">
+      <div class="container-wrapper"> <!-- index 페이지에는 없는 sidebar로 인해 wrapper 사용. 다른 페이지에도 navbar가 들어갈 때 wrapper가 들어가니, 여기도 어쩔 수 없이 추가-->
+        <h1 class="navbar"><a href="index.html"><span class="logo-first">QUEUE</span><span class="logo-second">STACK</span></a></h1>
+        <ul>
+          <li class="menu">
+            <a style="color : blue" href="press-current.html">Press</a>
+            <ul class="submenu">
+              <li><a href ="press-current.html" style="color :blue">Current</a></li>
+              <li><a href ="press-past.html" style="color :blue">Past</a></li>
+            </ul>
+          </li> 
+          <li class="menu">
+            <a style="color : #EC9F53" href="exhibitions-current.html">Exhibitions</a>
+            <ul class="submenu">
+              <li><a href ="exhibitions-current.html" style="color :#EC9F53">Current</a></li>
+              <li><a href ="exhibitions-past.html" style="color :#EC9F53">Past</a></li>
+              <li><a href ="exhibitions-upcoming.html" style="color :#EC9F53">Upcoming</a></li>              
+            </ul>
+          </li>
+          <li><a style="color : #9E2A2A" href="works.html">Works</a></li>
+          <li><a style="color : green" href="columns.html">Columns</a></li>
+          <li><a style="color : purple" href="about.html">About</a></li>
+        </ul> <!-- li에 style 속성 적용하면 우선순위에 밀림. 텍스트 색은 실제 텍스트가 있는 요소에 적용해야함. li에 적용해도 자식인 a가 별도 색이 있으므로 상속 X -->
+      </div>
+      <h2 class="sidebar">COLUMNS</h2>
+    </div>
+      
+    <div class="columns">
+      <div class ="wrapper">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1758098491141-0ecfdcdbc15f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+          <p class="caption">Invented Man Revealing Still Life, 2024 oil on canvas</p>
+        </div>
+        <div class="text-wrapper">
+          <span class="description">This website represents an overview of Hwan Kim's work from the early 2000's to the present day. It is organized by categories with sub-menus for each discipline.
+          Although not exhaustive it is thorough and you can find current and past events, exhibitions, biographic and reference data.</span><br><br>
+          COLUMNS<br><br>
+          <a>The Thinkpad</a>
+          <a>What I wanted to be</a>
+          <a>How to pioneer my future</a>
+          <a>If you want to be a artist</a>
+        </div>
+      </div>
+    </div>
+    
+    <hr id="index-hr">
+    <p style="color : green" class="caption">ALL IMAGES AND SITE CONTENT COPYRIGHT @ 2025 HWAN KIM - ALL RIGHTS RESERVED</p>
+  </body>
 </html>
