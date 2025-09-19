@@ -1,8 +1,8 @@
-.exhibitions-logo .container-wrapper .navbar .logo-first {
+.columns-logo .container-wrapper .navbar .logo-first {
       color : #EC9F53 ;
     }
   
-    .container .sidebar-first { /* (index.html 제외) sidebar로 인해 wrapper 사용. exhibitions, resources만 sidebar first, second로 나뉨 */
+    .container .sidebar { /* (index.html 제외) sidebar로 인해 wrapper 사용. exhibitions, resources만 sidebar first, second로 나뉨 */
       text-align : right ;
       margin : 0 0 ;
       padding-right : 20% ;
@@ -15,20 +15,7 @@
       text wrapper에 relative 쓰고 이렇게 하면, 문서 흐름에서 제외되어 스크롤 시 navbar 위로 겹치는 문제  
       -> navbar에 넣고 자체 위치 조정 */
     }
-    .container .sidebar-second { /* (index.html 제외) sidebar로 인해 wrapper 사용 */
-      text-align : right ;
-      margin : 0 0 ;
-      padding-right : 20% ;
-      padding-bottom : 1% ;
-      color : green ;
-      font-weight : lighter ;
-      border-bottom : 1px solid #f0f0f0 ;
-      /* position : absolute ;
-      top : 10% ;
-      right : 20% ;  
-      text wrapper에 relative 쓰고 이렇게 하면, 문서 흐름에서 제외되어 스크롤 시 navbar 위로 겹치는 문제  
-      -> navbar에 넣고 자체 위치 조정 */
-    }
+
   
     .container .sidebar-second a { /* sidebar 원래 색 주황, 근데 검정으로 기본 지정. hover 시 부모 상속되도록 */
         color : black ;
@@ -73,7 +60,7 @@
 
     #index-hr {
       border : none ;
-      border-top : 10px solid #9E2A2A ; 
+      border-top : 10px solid green ; 
       width : 80% ;
       max-width : 1100px ; 
       margin-top : 60px ; /* border 자체가 padding을 덮는 box이므로 margin 써야함 */
