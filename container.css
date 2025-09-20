@@ -109,7 +109,6 @@
       display : block ; /* 원래 숨겨진 submenu를 조건부 선택자 :hover와 연결해 보이게 함 */
     }
     .container .menu .submenu a:hover {
-      color : black !important ;
       font-weight : bold ;
     }
 
